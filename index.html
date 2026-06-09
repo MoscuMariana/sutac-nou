@@ -509,6 +509,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ── MOBILE GLOBAL ── */
 @media (max-width: 768px) {
+  .hero-btn { display: block; text-align: center; padding: 18px 24px; margin-top: 15px; }
   .hero-scroll { display: none; }
   .s-hamburger { padding: 12px; }
   .s-hamburger span { width: 28px; }
@@ -550,4 +551,386 @@ body {
     radial-gradient(ellipse at 78% 25%, rgba(20,100,145,1) 0%, transparent 70%),
     radial-gradient(ellipse at 18% 78%, rgba(35,148,165,.92) 0%, transparent 65%),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath fill='%234bb8c4' opacity='.18' d='M90 25 Q70 5 40 25 Q70 45 90 25Z M40 25 L20 10 L25 25 L20 40Z'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath fill='%234bb8c4' opacity='.18' d='M10 25
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath fill='%234bb8c4' opacity='.18' d='M10 25 Q30 5 60 25 Q30 45 10 25Z M60 25 L80 10 L75 25 L80 40Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0 0, 0 0, 88% 35%, 7% 72%;
+  background-size: 100% 100%, 100% 100%, 220px, 170px;
+}
+
+/* ══════════════════════════════════════════
+   MOBILE — TOT SITE-UL (≤ 768px)
+   ══════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ── Hero (Strâns și apropiat la maximum) ── */
+  .hero { 
+    min-height: 32vh; 
+  }
+  .hero-content { 
+    padding-top: 45px; 
+  }
+  .hero-title-line1 {
+    font-size: 10px !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 0px !important;
+    line-height: 0.9 !important;
+  }
+  .hero-title-line2 {
+    font-size: 22px !important; /* Scris considerabil mai mic */
+    letter-spacing: 0.5px !important; /* Litere mai adunate */
+    line-height: 0.9 !important; /* Rânduri foarte apropiate */
+    margin-top: 0px !important;
+  }
+  .hero-sub {
+    font-size: 9px !important;
+    letter-spacing: 1px !important;
+    margin-top: 2px !important;
+  }
+  .hero-ctas {
+    margin-top: 12px !important; /* Apropierea butoanelor de text */
+  }
+
+  /* ── About (Se mută video sus și textul dedesubt) ── */
+  .about-section { 
+    flex-direction: column;
+    min-height: unset; 
+    background: var(--bg);
+  }
+  .about-vbg {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    inset: auto;
+  }
+  .about-vbg video {
+    height: 100%;
+    object-fit: cover;
+  }
+  .about-vbg-overlay {
+    background: linear-gradient(to bottom, rgba(6,24,32,.1) 0%, rgba(6,24,32,.9) 100%) !important;
+  }
+  .about-content { 
+    position: relative;
+    padding: 30px 22px 50px !important;
+    max-width: 100%; 
+    background: var(--bg);
+  }
+
+  /* ── Program ── */
+  .program-text { padding: 40px 22px 48px !important; }
+  .program-hours { margin: 24px 0 28px; }
+  .program-row { padding: 12px 0; }
+  .program-time { font-size: 17px; }
+
+  /* ── Galerie ── */
+  .gallery-section { padding: 50px 0 !important; }
+  .gallery-section .s-title { margin-bottom: 28px !important; }
+
+  /* ── Titluri & texte ── */
+  .s-title  { font-size: clamp(26px, 7.5vw, 38px) !important; line-height: 1.2; }
+  .s-text   { font-size: 14px !important; line-height: 1.8 !important; }
+  .s-tag    { font-size: 9px !important; letter-spacing: 3px; }
+  .s-divider { margin: 12px 0 18px; }
+  .s-link-arrow { font-size: 10px; letter-spacing: 2.5px; margin-top: 22px; }
+
+  /* ── Footer compact ── */
+  .s-footer { padding: 40px 0 20px !important; }
+  .s-footer-col p, .s-footer-col a { font-size: 13px; }
+
+  /* ── Scroll indicator ── */
+  .hero-scroll { display: none; }
+
+  /* ── Marquee ── */
+  .marquee-wrap { padding: 14px 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="s-header" id="sHeader">
+  <nav class="s-nav">
+    <a href="index.html" class="s-logo">
+      <img src="assets/img/logo orig.jpeg" alt="Pescăria Sutac">
+    </a>
+    <ul class="s-nav-links">
+      <li><a href="index.html">Acasă</a></li>
+      <li><a href="povestea.html">Povestea</a></li>
+      <li><a href="about.html">Evenimente</a></li>
+      <li><a href="meniu.html">Meniu</a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=100090660430181" target="_blank" rel="noopener">Facebook</a></li>
+      <li><a href="rezervari.html" class="s-nav-cta">Rezervă</a></li>
+    </ul>
+    <button class="s-hamburger" id="hamburger" aria-label="Deschide meniu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="s-mobile-menu" id="mobileMenu" role="navigation">
+  <ul>
+    <li><a href="index.html">Acasă</a></li>
+    <li><a href="povestea.html">Povestea</a></li>
+    <li><a href="about.html">Evenimente</a></li>
+    <li><a href="meniu.html">Meniu</a></li>
+    <li><a href="https://www.facebook.com/profile.php?id=100090660430181" target="_blank" rel="noopener">Facebook</a></li>
+    <li><a href="rezervari.html">Rezervă</a></li>
+  </ul>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      <div class="hero-badge-line"></div>
+      <span class="hero-eyebrow">Plaja Sălbatică Corbu &nbsp;·&nbsp; Est. 1998</span>
+    </div>
+
+    <h1>
+      <span class="hero-title-line1">Restaurant</span>
+      <span class="hero-title-line2"><span class="hero-title-accent">Pescăria Sutac</span></span>
+    </h1>
+    <p class="hero-sub">& Brigadă Piscicolă</p>
+
+    <div class="hero-sep">
+      <div class="hero-sep-line"></div>
+      <span class="hero-sep-text">Pescăria Sutac &nbsp;·&nbsp; Restaurant Pescăresc Autentic</span>
+      <div class="hero-sep-line"></div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num">1998</span>
+        <span class="hero-stat-label">Fondați</span>
+      </div>
+      <div class="hero-stat-sep"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">3</span>
+        <span class="hero-stat-label">Generații</span>
+      </div>
+      <div class="hero-stat-sep"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">100%</span>
+        <span class="hero-stat-label">Pește proaspăt</span>
+      </div>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="rezervari.html" class="hero-btn-primary">Rezervă o masă</a>
+      <a href="meniu.html" class="hero-btn-secondary">Descoperă meniul</a>
+    </div>
+
+  </div>
+
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span class="hero-scroll-label">Scroll</span>
+    <div class="hero-scroll-icon">
+      <svg width="20" height="28" viewBox="0 0 20 28" fill="none">
+        <rect x="1" y="1" width="18" height="26" rx="9" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="10" cy="8" r="2" fill="currentColor">
+          <animate attributeName="cy" values="8;16;8" dur="2s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-inner">
+    <span class="marquee-text"><em>De trei</em> generații <em>la malul</em> mării &mdash;&ensp;</span>
+    <span class="marquee-text"><em>De trei</em> generații <em>la malul</em> mării &mdash;&ensp;</span>
+    <span class="marquee-text"><em>De trei</em> generații <em>la malul</em> mării &mdash;&ensp;</span>
+    <span class="marquee-text"><em>De trei</em> generații <em>la malul</em> mării &mdash;&ensp;</span>
+    <span class="marquee-text"><em>De trei</em> generații <em>la malul</em> mării &mdash;&ensp;</span>
+    <span class="marquee-text"><em>De trei</em> generații <em>la malul</em> mării &mdash;&ensp;</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about-section" id="despre">
+  <div class="about-vbg">
+    <video src="assets/video/pescar2.mp4" autoplay loop muted playsinline></video>
+    <div class="about-vbg-overlay"></div>
+  </div>
+  <div class="about-content">
+    <span class="s-tag">Cine suntem</span>
+    <h2 class="s-title">Despre <span>noi</span></h2>
+    <div class="s-divider"></div>
+    <p class="s-text">Situată chiar pe buza plajei Corbu, Pescăria Sutac nu este doar un restaurant, ci o poveste de familie scrisă cu sare și dor de ducă. Suntem una dintre ultimele oaze de sălbăticie de la malul mării, unde onestitatea bucătăriei pescărești se împletește cu libertatea orizontului.</p>
+    <p class="s-text" style="margin-top:16px;">Afacerea noastră este ancorată în trei generații de pescari. De la bunic la nepot, am învățat că marea nu se stăpânește, ci se respectă. Această legătură de sânge cu valurile este garanția că tot ce ajunge în farfuria ta poartă amprenta autenticității.</p>
+    <a href="povestea.html" class="s-link-arrow">
+      Citește povestea
+      <svg width="20" height="8" viewBox="0 0 20 8" fill="none">
+        <path d="M12 1l6 3.5L12 7M0 4.5h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section class="program-section">
+  <div class="program-grid">
+    <div class="program-img">
+      <img src="assets/img/img sutac1.jpg" alt="Restaurant Pescăria Sutac pe Plaja Corbu" loading="lazy">
+    </div>
+    <div class="program-text">
+      <span class="s-tag">Când ne găsești</span>
+      <h2 class="s-title program-title">Program</h2>
+      <div class="s-divider"></div>
+      <p class="s-text">Vă invităm să ne treceți pragul în intervalele menționate mai jos pentru a descoperi aromele deosebite ale meniului nostru, într-o atmosferă distinsă.</p>
+      <div class="program-hours">
+        <div class="program-row">
+          <span class="program-day">Zilnic</span>
+          <span class="program-time">10:30 — 22:30</span>
+        </div>
+      </div>
+      <a href="rezervari.html" class="s-btn-outline">Rezervă acum</a>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+  <div class="gallery-outer">
+    <span class="s-tag" style="text-align:center;">Preparate</span>
+    <h2 class="s-title" style="text-align:center; margin-bottom:50px;">Galerie Foto</h2>
+  </div>
+  <div class="gallery-outer">
+    <div class="swiper gallery-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><div class="gallery-item"><img src="assets/img/portfolio_1.jpg" alt="Preparat Pescăria Sutac" loading="lazy"></div></div>
+        <div class="swiper-slide"><div class="gallery-item"><img src="assets/img/portfolio_2.jpg" alt="Preparat Pescăria Sutac" loading="lazy"></div></div>
+        <div class="swiper-slide"><div class="gallery-item"><img src="assets/img/portfolio_3.jpg" alt="Preparat Pescăria Sutac" loading="lazy"></div></div>
+        <div class="swiper-slide"><div class="gallery-item"><img src="assets/img/portfolio_4.jpg" alt="Preparat Pescăria Sutac" loading="lazy"></div></div>
+        <div class="swiper-slide"><div class="gallery-item"><img src="assets/img/portfolio_5.jpg" alt="Preparat Pescăria Sutac" loading="lazy"></div></div>
+      </div>
+    </div>
+    <div class="gallery-controls">
+      <button class="s-btn-nav gallery-prev" aria-label="Anterior">
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
+          <path d="M6 1L1 6l5 5M1 6h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="gallery-pagination"></div>
+      <button class="s-btn-nav gallery-next" aria-label="Următor">
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
+          <path d="M10 1l5 5-5 5M15 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- COOKIE -->
+<div id="cookie-banner">
+  <p>Acest site folosește cookie-uri pentru o experiență mai bună. Continuând navigarea, ești de acord cu <a href="cookies.html">Politica de Cookies</a>.</p>
+  <div class="cookie-btns">
+    <button id="accept-cookies">Acceptă tot</button>
+    <button id="reject-cookies">Doar necesare</button>
+  </div>
+</div>
+
+<!-- SCROLL UP -->
+<button class="s-scrollup" id="scrollup" aria-label="Înapoi sus">
+  <svg width="12" height="14" viewBox="0 0 20 20" fill="none">
+    <path d="M0 10L1.7625 11.7625L8.75 4.7875V20H11.25V4.7875L18.225 11.775L20 10L10 0L0 10Z" fill="currentColor"/>
+  </svg>
+</button>
+
+<!-- FOOTER -->
+<footer class="s-footer">
+  <div class="s-footer-inner">
+    <div class="s-footer-grid">
+      <div class="s-footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+40730292776">+40 730 292 776</a>
+        <p style="font-size:13px; margin-top:4px;">Rezervări &amp; Info</p>
+      </div>
+      <div class="s-footer-col">
+        <h4>Locație</h4>
+        <p>Plaja Corbu,<br>Județul Constanța</p>
+        <a href="https://maps.app.goo.gl/LqXJBEXyGk9vnfK48" target="_blank" rel="noopener" style="font-size:12px; text-decoration:underline; margin-top:8px;">Vezi pe hartă</a>
+      </div>
+      <div class="s-footer-col">
+        <h4>Program</h4>
+        <p>Zilnic: 10:30 — 22:30</p>
+      </div>
+      <div class="s-footer-col">
+        <h4>Protecția Consumatorului</h4>
+        <div class="s-anpc">
+          <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="noopener">
+            <div class="s-anpc-badge"><span>ANPC SAL</span><small>Soluționare</small></div>
+          </a>
+          <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">
+            <div class="s-anpc-badge"><span>ANPC SOL</span><small>Online</small></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="s-footer-bottom">
+      <p class="s-footer-copy">© 2026 PESCĂRIA SUTAC. TOATE DREPTURILE REZERVATE.</p>
+      <div class="s-footer-legal">
+        <a href="termene.html">Privacy</a>
+        <a href="cookies.html">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/plugins/swiper.min.js"></script>
+<script>
+  const header = document.getElementById('sHeader');
+  const scrollup = document.getElementById('scrollup');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+    scrollup.classList.toggle('visible', window.scrollY > 400);
+  }, {passive: true});
+
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  }));
+
+  new Swiper('.gallery-swiper', {
+    slidesPerView: 1.15,
+    spaceBetween: 16,
+    loop: true,
+    navigation: { nextEl: '.gallery-next', prevEl: '.gallery-prev' },
+    pagination: { el: '.gallery-pagination', clickable: true, type: 'bullets' },
+    breakpoints: {
+      640: { slidesPerView: 2.1, spaceBetween: 20 },
+      1024: { slidesPerView: 3.1, spaceBetween: 24 }
+    }
+  });
+
+  scrollup.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+
+  (function() {
+    const b = document.getElementById('cookie-banner');
+    if (!localStorage.getItem('cookieConsent')) b.classList.add('show');
+    document.getElementById('accept-cookies').addEventListener('click', () => { localStorage.setItem('cookieConsent','1'); b.classList.remove('show'); });
+    document.getElementById('reject-cookies').addEventListener('click', () => { localStorage.setItem('cookieConsent','0'); b.classList.remove('show'); });
+  })();
+</script>
+</body>
+</html>
