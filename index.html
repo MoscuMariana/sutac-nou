@@ -100,7 +100,7 @@ a { text-decoration: none; color: inherit; }
 
 @media (max-width: 960px) {
   .s-nav { flex-direction: row; justify-content: space-between; padding: 12px 20px; align-items: center; }
-  .s-logo img { height: 38px; }
+  .s-logo img { height: 32px; } /* Logo mai mic pe tablete / ecrane medii */
   .s-nav-links { display: none; }
   .s-hamburger { display: flex; }
   .s-mobile-menu.open { display: flex; }
@@ -525,7 +525,7 @@ a { text-decoration: none; color: inherit; }
   .hero-title { font-size: clamp(32px,11vw,46px); }
   .hero-eyebrow { font-size: 9px; letter-spacing: 4px; }
   .s-nav { padding: 14px 16px; }
-  .s-logo img { height: 44px; }
+  .s-logo img { height: 32px; } /* Forțează logo-ul foarte mic pe ecrane înguste */
   .s-divider { margin: 14px 0 22px; }
 }
 
@@ -576,7 +576,7 @@ body {
   .about-vbg {
     position: relative;
     width: 100%;
-    height: 280px;
+    height: 190px; /* Redus considerabil pentru a nu ocupa mult ecran */
     inset: auto;
   }
   .about-vbg video {
@@ -584,11 +584,11 @@ body {
     object-fit: cover;
   }
   .about-vbg-overlay {
-    background: linear-gradient(to bottom, rgba(6,24,32,.2) 0%, rgba(6,24,32,.85) 100%) !important;
+    background: linear-gradient(to bottom, rgba(6,24,32,.1) 0%, rgba(6,24,32,.9) 100%) !important;
   }
   .about-content { 
     position: relative;
-    padding: 40px 22px 56px !important; 
+    padding: 30px 22px 50px !important; /* Spațieri compacte */
     max-width: 100%; 
     background: var(--bg);
   }
