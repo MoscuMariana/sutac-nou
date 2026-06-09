@@ -1,0 +1,475 @@
+﻿<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Povestea Sutac | Restaurant Pescăresc Corbu</title>
+<meta name="description" content="Descoperă povestea familiei Sutac — trei generații de pescari pe Plaja Corbu. Autenticitate, pasiune și gustul mării direct în farfurie.">
+<meta property="og:title" content="Povestea Sutac — Gustul mării, direct la tine în farfurie">
+<meta property="og:image" content="assets/img/og-image-sutac.jpg">
+<meta property="og:url" content="https://www.pescariasutac.ro/povestea.html">
+<link rel="icon" href="assets/img/logo  sutac 9 (1).png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --seafoam: #4bb8c4;
+  --gold: #c9a84c;
+  --cream: #f5f0e8;
+  --bg: #122840;
+  --bg-alt: #0d1117;
+  --ocean: #0e4d6c;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); font-family: 'Raleway', sans-serif; color: var(--cream); overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+
+/* ── NAV ── */
+.s-header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(6,24,32,.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(201,168,76,.2); transition: background .4s, border-color .4s, box-shadow .4s; }
+.s-header.scrolled { background: rgba(6,24,32,.97); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid rgba(201,168,76,.35); box-shadow: 0 4px 40px rgba(0,0,0,.45); }
+.s-nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 60px; max-width: 1400px; margin: 0 auto; }
+.s-logo img { height: 56px; width: auto; mix-blend-mode: screen; }
+.s-nav-links { display: flex; list-style: none; gap: 44px; align-items: center; }
+.s-nav-links a { color: rgba(245,240,232,.92); font-family: 'Raleway', sans-serif; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; transition: color .25s; position: relative; }
+.s-nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 100%; height: 1px; background: var(--gold); transition: right .3s; }
+.s-nav-links a:hover { color: var(--cream); }
+.s-nav-links a:hover::after { right: 0; }
+.s-nav-cta { padding: 12px 30px !important; border: 1px solid rgba(201,168,76,.75) !important; color: var(--gold) !important; transition: background .3s, color .3s !important; }
+.s-nav-cta::after { display: none !important; }
+.s-nav-cta:hover { background: var(--gold) !important; color: var(--bg) !important; }
+.s-hamburger { display: none; flex-direction: column; gap: 6px; background: none; border: none; cursor: pointer; padding: 6px; z-index: 1001; }
+.s-hamburger span { display: block; width: 28px; height: 2px; background: var(--cream); transition: all .3s; }
+.s-hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.s-hamburger.active span:nth-child(2) { opacity: 0; }
+.s-hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+.s-mobile-menu { display: none; position: fixed; inset: 0; background: var(--bg); z-index: 999; flex-direction: column; align-items: center; justify-content: center; }
+.s-mobile-menu.open { display: flex; }
+.s-mobile-menu ul { list-style: none; text-align: center; }
+.s-mobile-menu li { margin: 18px 0; }
+.s-mobile-menu a { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 5vw, 40px); color: var(--cream); font-style: italic; }
+.s-mobile-menu a:hover { color: var(--gold); }
+@media (max-width: 960px) { .s-nav { padding: 20px 24px; } .s-logo img { height: 54px; } .s-nav-links { display: none; } .s-hamburger { display: flex; } }
+
+/* ── PAGE HERO ── */
+.page-hero {
+  height: 70vh; min-height: 400px;
+  background-image: url('assets/img/about_us.jpg');
+  background-size: cover; background-position: center;
+  position: relative; display: flex; align-items: flex-end; padding-bottom: 80px;
+}
+.page-hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(6,24,32,.88) 0%, rgba(6,24,32,.18) 35%, rgba(6,24,32,.04) 100%); }
+.page-hero-content { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 0 60px; width: 100%; }
+.page-hero-eyebrow { font-family: 'Raleway', sans-serif; font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: var(--seafoam); font-weight: 700; margin-bottom: 14px; display: block; }
+.page-hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(38px, 6vw, 72px); color: var(--cream); font-weight: 400; font-style: italic; line-height: 1.1; }
+.page-hero-sub { font-size: 14px; color: rgba(245,240,232,.5); letter-spacing: 2px; margin-top: 10px; font-weight: 300; }
+
+@media (max-width: 768px) { .page-hero-content { padding: 0 24px; } .page-hero { padding-bottom: 50px; } }
+
+/* ── UTILITIES ── */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
+.s-tag { font-family: 'Raleway', sans-serif; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--seafoam); font-weight: 700; display: block; margin-bottom: 12px; }
+.s-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 48px); color: var(--cream); font-weight: 400; line-height: 1.2; }
+.s-title span { color: var(--gold); font-style: italic; }
+.s-divider { width: 50px; height: 1px; background: linear-gradient(90deg, var(--gold), transparent); margin: 16px 0 26px; }
+.s-text { font-size: 16px; color: rgba(245,240,232,.88); line-height: 2.05; font-weight: 300; }
+.s-text + .s-text { margin-top: 16px; }
+
+@media (max-width: 768px) { .container { padding: 0 24px; } }
+
+/* ── VIDEO ── */
+.video-section { padding: 80px 0; background: var(--bg); }
+.video-heading { text-align: center; margin-bottom: 48px; }
+.video-heading .s-title { font-size: clamp(22px, 3.5vw, 38px); }
+.video-wrap {
+  max-width: 860px; margin: 0 auto;
+  border: 2px solid var(--gold);
+  position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+  box-shadow: 0 0 80px rgba(201,168,76,.12);
+}
+.video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+/* ── STORY SECTIONS ── */
+.story-section { padding: 90px 0; border-top: 1px solid rgba(255,255,255,.04); }
+.story-section:nth-child(even) { background: rgba(14,77,108,.04); }
+.story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.story-grid.reverse { direction: rtl; }
+.story-grid.reverse > * { direction: ltr; }
+.story-img { position: relative; overflow: hidden; }
+.story-img img { width: 100%; height: 480px; object-fit: cover; filter: brightness(.85) contrast(1.05); transition: transform .6s ease; }
+.story-img:hover img { transform: scale(1.03); }
+.story-img-frame {
+  position: absolute; inset: 20px;
+  border: 1px solid rgba(201,168,76,.2);
+  pointer-events: none;
+}
+.story-num {
+  font-family: 'Cormorant Garamond', serif; font-size: 80px;
+  color: rgba(201,168,76,.08); font-style: italic; font-weight: 700;
+  line-height: 1; margin-bottom: -20px; display: block;
+}
+.story-title-bold { color: var(--gold); font-weight: 700; font-size: 16px; letter-spacing: 1px; display: block; margin-bottom: 10px; font-family: 'Raleway', sans-serif; }
+
+@media (max-width: 900px) {
+  .story-grid { grid-template-columns: 1fr; gap: 40px; }
+  .story-grid.reverse { direction: ltr; }
+  .story-img img { height: 300px; }
+  .story-section { padding: 60px 0; }
+}
+
+/* ── SPECIAL SECTION ── */
+.special-section { padding: 100px 0; background: var(--bg-alt); }
+.special-inner { max-width: 800px; margin: 0 auto; }
+.special-list { list-style: none; margin: 30px 0 40px; }
+.special-list li {
+  padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,.06);
+  display: grid; grid-template-columns: 24px 1fr; gap: 16px; align-items: start;
+}
+.special-list li::before {
+  content: ''; display: block; width: 8px; height: 8px;
+  background: var(--gold); border-radius: 50%; margin-top: 8px;
+}
+.special-list strong { color: var(--seafoam); font-size: 14px; letter-spacing: 1px; display: block; margin-bottom: 4px; font-weight: 700; }
+.special-list span { font-size: 15px; color: rgba(245,240,232,.78); line-height: 1.8; font-weight: 300; }
+.special-quote {
+  margin-top: 40px; padding: 28px 32px;
+  border-left: 3px solid var(--gold);
+  background: rgba(201,168,76,.05);
+}
+.special-quote p {
+  font-family: 'Cormorant Garamond', serif; font-size: 16px;
+  color: rgba(245,240,232,.75); font-style: italic; line-height: 1.8;
+}
+
+/* ── FOOTER ── */
+.s-footer { background: var(--bg-alt); border-top: 1px solid rgba(255,255,255,.05); padding: 70px 0 30px; }
+.s-footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
+.s-footer-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 40px; padding-bottom: 50px; border-bottom: 1px solid rgba(255,255,255,.05); margin-bottom: 30px; }
+.s-footer-col h4 { font-family: 'Raleway', sans-serif; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; font-weight: 700; }
+.s-footer-col p, .s-footer-col a { color: rgba(245,240,232,.78); font-size: 15px; line-height: 1.9; display: block; font-weight: 300; }
+.s-footer-col a:hover { color: var(--cream); }
+.s-footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.s-footer-copy { font-size: 11px; color: rgba(245,240,232,.25); letter-spacing: 1px; }
+.s-footer-legal { display: flex; gap: 20px; }
+.s-footer-legal a { font-size: 11px; color: rgba(245,240,232,.25); }
+.s-footer-legal a:hover { color: rgba(245,240,232,.5); }
+.s-anpc { display: flex; gap: 8px; margin-top: 14px; }
+.s-anpc-badge { border: 1px solid rgba(255,255,255,.15); padding: 6px 8px; text-align: center; border-radius: 2px; transition: border-color .3s; }
+.s-anpc-badge:hover { border-color: rgba(255,255,255,.35); }
+.s-anpc-badge span { display: block; font-size: 8px; color: rgba(255,255,255,.65); font-weight: 700; letter-spacing: .5px; }
+.s-anpc-badge small { font-size: 6px; color: rgba(255,255,255,.3); text-transform: uppercase; }
+@media (max-width: 768px) { .s-footer-grid { grid-template-columns: 1fr 1fr; } .s-footer-inner { padding: 0 24px; } .s-footer-bottom { flex-direction: column; align-items: flex-start; } }
+@media (max-width: 480px) { .s-footer-grid { grid-template-columns: 1fr; } }
+
+/* ── MOBILE GLOBAL ── */
+@media (max-width: 768px) {
+  .page-hero { background-attachment: scroll; min-height: 320px; height: 60vw; padding-bottom: 44px; }
+  .page-hero-content { padding: 0 20px; }
+  .page-hero-title { font-size: clamp(32px,9vw,50px); }
+  .video-section { padding: 56px 0; }
+  .video-wrap { margin: 0 20px; }
+  .story-section { padding: 56px 0; }
+  .story-img img { height: 260px; }
+  .story-img-frame { inset: 10px; }
+  .story-num { font-size: 56px; margin-bottom: -12px; }
+  .special-section { padding: 70px 0; }
+  .special-list li { padding: 16px 0; }
+  .special-quote { padding: 22px 20px; }
+  .special-quote p { font-size: 15px; }
+  .s-hamburger { padding: 12px; }
+  .s-footer { padding: 56px 0 24px; }
+  .cookie-btns { width: 100%; }
+  #accept-cookies, #reject-cookies { flex: 1; padding: 13px 10px; }
+}
+@media (max-width: 480px) {
+  .page-hero-title { font-size: clamp(28px,10vw,42px); }
+  .s-nav { padding: 14px 16px; }
+  .s-logo img { height: 44px; }
+  .container { padding: 0 16px; }
+  .story-text { padding-top: 8px; }
+}
+
+/* ── SCROLL UP ── */
+.s-scrollup { position: fixed; bottom: 28px; right: 28px; width: 44px; height: 44px; background: rgba(6,24,32,.85); border: 1px solid rgba(201,168,76,.4); color: var(--gold); cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: all .3s; z-index: 800; }
+.s-scrollup.visible { opacity: 1; pointer-events: auto; }
+.s-scrollup:hover { background: var(--gold); color: var(--bg); }
+
+/* ── COOKIE ── */
+#cookie-banner { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: rgba(6,24,32,.97); border-top: 1px solid rgba(201,168,76,.25); padding: 18px 40px; z-index: 9999; align-items: center; gap: 20px; flex-wrap: wrap; backdrop-filter: blur(10px); }
+#cookie-banner.show { display: flex; }
+#cookie-banner p { flex: 1; font-size: 12px; color: rgba(245,240,232,.6); line-height: 1.6; margin: 0; min-width: 200px; }
+#cookie-banner a { color: var(--gold); text-decoration: underline; }
+.cookie-btns { display: flex; gap: 10px; }
+#accept-cookies { background: var(--gold); color: var(--bg); border: none; padding: 10px 22px; cursor: pointer; font-weight: 700; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-family: 'Raleway', sans-serif; }
+#reject-cookies { background: transparent; color: rgba(245,240,232,.4); border: 1px solid rgba(245,240,232,.15); padding: 10px 22px; cursor: pointer; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-family: 'Raleway', sans-serif; }
+
+/* ── OCEAN AMBIANCE ── */
+body {
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(20,100,145,1) 0%, transparent 70%),
+    radial-gradient(ellipse at 80% 80%, rgba(35,148,165,1) 0%, transparent 70%),
+    var(--bg);
+  background-attachment: fixed;
+}
+@media (max-width: 768px) { body { background-attachment: scroll; } }
+.video-section, .special-section {
+  background-image:
+    radial-gradient(ellipse at 20% 30%, rgba(20,100,145,1) 0%, transparent 70%),
+    radial-gradient(ellipse at 82% 72%, rgba(35,148,165,.95) 0%, transparent 65%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath fill='%234bb8c4' opacity='.22' d='M10 25 Q30 5 60 25 Q30 45 10 25Z M60 25 L80 10 L75 25 L80 40Z'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath fill='%234bb8c4' opacity='.22' d='M90 25 Q70 5 40 25 Q70 45 90 25Z M40 25 L20 10 L25 25 L20 40Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0 0, 0 0, 5% 25%, 90% 72%;
+  background-size: 100% 100%, 100% 100%, 190px, 230px;
+}
+.story-section {
+  background-image:
+    radial-gradient(ellipse at 78% 40%, rgba(20,100,145,1) 0%, transparent 70%),
+    radial-gradient(ellipse at 22% 65%, rgba(35,148,165,.90) 0%, transparent 63%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath fill='%234bb8c4' opacity='.18' d='M90 25 Q70 5 40 25 Q70 45 90 25Z M40 25 L20 10 L25 25 L20 40Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0 0, 0 0, 95% 50%;
+  background-size: 100% 100%, 100% 100%, 260px;
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="s-header" id="sHeader">
+  <nav class="s-nav">
+    <a href="index.html" class="s-logo">
+      <img src="assets/img/logo orig.jpeg" alt="Pescăria Sutac">
+    </a>
+    <ul class="s-nav-links">
+      <li><a href="index.html">Acasă</a></li>
+      <li><a href="povestea.html">Povestea</a></li>
+      <li><a href="about.html">Evenimente</a></li>
+      <li><a href="meniu.html">Meniu</a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=100090660430181" target="_blank" rel="noopener">Facebook</a></li>
+      <li><a href="rezervari.html" class="s-nav-cta">Rezervă</a></li>
+    </ul>
+    <button class="s-hamburger" id="hamburger" aria-label="Deschide meniu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<div class="s-mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="index.html">Acasă</a></li>
+    <li><a href="povestea.html">Povestea</a></li>
+    <li><a href="about.html">Evenimente</a></li>
+    <li><a href="meniu.html">Meniu</a></li>
+    <li><a href="https://www.facebook.com/profile.php?id=100090660430181" target="_blank" rel="noopener">Facebook</a></li>
+    <li><a href="rezervari.html">Rezervă</a></li>
+  </ul>
+</div>
+
+<main>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+</section>
+
+<!-- VIDEO -->
+<section class="video-section">
+  <div class="container">
+    <div class="video-heading">
+      <span class="s-tag" style="text-align:center;">Povestea Sutac</span>
+    </div>
+    <div class="video-wrap">
+      <iframe
+        src="https://www.youtube.com/embed/zEjDwHxyBb4?si=899vy7WgvJFEq2Gm&rel=0"
+        title="Pescăria Sutac — Prezentare"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- STORY 1: SORIN -->
+<section class="story-section">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-img">
+        <img src="assets/img/sorin.jpg" alt="Sorin — fondatorul Pescăriei Sutac" loading="lazy">
+        <div class="story-img-frame"></div>
+      </div>
+      <div class="story-text">
+        <span class="story-num">01</span>
+        <span class="s-tag">1998</span>
+        <h2 class="s-title">Rădăcinile:<br><span>Visul lui Sorin</span></h2>
+        <div class="s-divider"></div>
+        <p class="s-text">Totul a început în 1998. Pe atunci, plaja din Corbu nu era destinația de astăzi, ci un tărâm sălbatic, unde marea vorbea doar cu cei care știau să o asculte. Sorin, bunicul de astăzi, a fost cel care a pus prima piatră de temelie. Cu palmele bătătorite de rame și plase, el a înțeles un adevăr simplu: marea îți dă totul dacă știi să o respecți.</p>
+        <p class="s-text">Nu a fost doar o afacere; a fost promisiunea că peștele care ajunge în farfurie trebuie să aibă gustul sării de dimineață și al prospețimii absolute.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY 2: ALEXANDRU -->
+<section class="story-section">
+  <div class="container">
+    <div class="story-grid reverse">
+      <div class="story-img">
+        <img src="assets/img/barca.jpg" alt="Alexandru continuă tradiția" loading="lazy">
+        <div class="story-img-frame"></div>
+      </div>
+      <div class="story-text">
+        <span class="story-num">02</span>
+        <span class="s-tag">Prezentul</span>
+        <h2 class="s-title">Alexandru<br><span>&amp; Ștafeta Pasiunii</span></h2>
+        <div class="s-divider"></div>
+        <p class="s-text">Anii au trecut, valurile au modelat țărmul, iar cârma a fost preluată de Alexandru. Crescut în sunetul pescărușilor, Alexandru a transformat moștenirea tatălui său într-un punct de reper pe harta sufletului celor care vizitează Corbu.</p>
+        <p class="s-text">Pentru el, restaurantul de pe plajă nu este doar un loc de muncă, ci o misiune. Diminețile încep înainte ca soarele să iasă din valuri. Alexandru și Sorin ies în larg, acolo unde cerul se contopește cu apa, pentru a-și pescui singuri marfa. Fiecare plasă trasă la mal este o legătură între trecutul tatălui și viitorul fiului.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY 3: TREI GENERAȚII -->
+<section class="story-section">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-img">
+        <img src="assets/img/familie.jpeg" alt="Trei generații — familia Sutac" loading="lazy">
+        <div class="story-img-frame"></div>
+      </div>
+      <div class="story-text">
+        <span class="story-num">03</span>
+        <span class="s-tag">Moștenirea</span>
+        <h2 class="s-title">Magia<br><span>celor trei generații</span></h2>
+        <div class="s-divider"></div>
+        <p class="s-text">Cea mai emoționantă imagine la SUTAC este cea a micuțului de 7 ani. La vârsta la care alți copii se pierd în ecrane, el stă mândru între tată și bunic.</p>
+        <p class="s-text">Lângă Bunicul Sorin, învață să descifreze semnele vântului. Lângă Tatăl Alexandru, învață arta de a primi oamenii cu inima deschisă. E mereu acolo, pe plajă, cu picioarele în nisip și ochii plini de admirație — micul pescar care poartă deja în sânge dragostea pentru Corbu.</p>
+        <p class="s-text" style="margin-top:14px;">Când îl vezi ajutând la aranjatul mesei sau privind cu seriozitate spre barca ce se întoarce la mal, înțelegi că povestea SUTAC nu se va termina niciodată.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DE CE SUTAC -->
+<section class="special-section">
+  <div class="container">
+    <div class="special-inner">
+      <span class="s-tag">Ce ne face speciali</span>
+      <h2 class="s-title" style="color: var(--seafoam);">De ce SUTAC<br>este special?</h2>
+      <div class="s-divider"></div>
+      <p class="s-text">Nu este vorba doar despre mâncare, ci despre <strong style="color:var(--cream);">ritual</strong>:</p>
+
+      <ul class="special-list">
+        <li>
+          <div>
+            <strong>Truda Proprie</strong>
+            <span>Peștele este prins de mâinile lor, nu cumpărat din depozite. Fiecare plasă trasă la mal înseamnă prospețime garantată.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Sinceritatea Locului</strong>
+            <span>La Corbu, sub semnătura familiei lor, timpul stă în loc. Suntem una din ultimele oaze de sălbăticie autentică pe litoralul românesc.</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Moștenirea</strong>
+            <span>Trei generații de bărbați, uniți de același nume și aceeași pasiune, servind comunitatea cu demnitate din 1998.</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="special-quote">
+        <p>„La SUTAC, nu primești doar o porție de pește. Primești o bucată din istoria noastră, condimentată cu dragostea a trei generații care au ales să rămână acasă, lângă mare."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- COOKIE -->
+<div id="cookie-banner">
+  <p>Acest site folosește cookie-uri pentru o experiență mai bună. Continuând navigarea, ești de acord cu <a href="cookies.html">Politica de Cookies</a>.</p>
+  <div class="cookie-btns">
+    <button id="accept-cookies">Acceptă tot</button>
+    <button id="reject-cookies">Doar necesare</button>
+  </div>
+</div>
+
+<!-- SCROLL UP -->
+<button class="s-scrollup" id="scrollup" aria-label="Înapoi sus">
+  <svg width="12" height="14" viewBox="0 0 20 20" fill="none">
+    <path d="M0 10L1.7625 11.7625L8.75 4.7875V20H11.25V4.7875L18.225 11.775L20 10L10 0L0 10Z" fill="currentColor"/>
+  </svg>
+</button>
+
+<!-- FOOTER -->
+<footer class="s-footer">
+  <div class="s-footer-inner">
+    <div class="s-footer-grid">
+      <div class="s-footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+40730292776">+40 730 292 776</a>
+        <p style="font-size:13px; margin-top:4px;">Rezervări &amp; Info</p>
+      </div>
+      <div class="s-footer-col">
+        <h4>Locație</h4>
+        <p>Plaja Corbu,<br>Județul Constanța</p>
+        <a href="https://maps.app.goo.gl/LqXJBEXyGk9vnfK48" target="_blank" rel="noopener" style="font-size:12px; text-decoration:underline; margin-top:8px;">Vezi pe hartă</a>
+      </div>
+      <div class="s-footer-col">
+        <h4>Program</h4>
+        <p>Zilnic: 10:30 — 22:30</p>
+      </div>
+      <div class="s-footer-col">
+        <h4>Protecția Consumatorului</h4>
+        <div class="s-anpc">
+          <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="noopener"><div class="s-anpc-badge"><span>ANPC SAL</span><small>Soluționare</small></div></a>
+          <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener"><div class="s-anpc-badge"><span>ANPC SOL</span><small>Online</small></div></a>
+        </div>
+      </div>
+    </div>
+    <div class="s-footer-bottom">
+      <p class="s-footer-copy">© 2026 PESCĂRIA SUTAC. TOATE DREPTURILE REZERVATE.</p>
+      <div class="s-footer-legal"><a href="termene.html">Privacy</a><a href="cookies.html">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const header = document.getElementById('sHeader');
+  const scrollup = document.getElementById('scrollup');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+    scrollup.classList.toggle('visible', window.scrollY > 400);
+  }, {passive: true});
+
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  }));
+
+  scrollup.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+
+  (function() {
+    const b = document.getElementById('cookie-banner');
+    if (!localStorage.getItem('cookieConsent')) b.classList.add('show');
+    document.getElementById('accept-cookies').addEventListener('click', () => { localStorage.setItem('cookieConsent','1'); b.classList.remove('show'); });
+    document.getElementById('reject-cookies').addEventListener('click', () => { localStorage.setItem('cookieConsent','0'); b.classList.remove('show'); });
+  })();
+</script>
+</body>
+</html>

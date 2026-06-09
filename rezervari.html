@@ -1,0 +1,399 @@
+﻿<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rezervări | Pescăria Sutac — Plaja Corbu</title>
+<meta name="description" content="Rezervă o masă la Pescăria Sutac pe Plaja Corbu. Formular rapid de rezervare cu confirmare pe WhatsApp.">
+<meta property="og:title" content="Rezervări — Pescăria Sutac">
+<meta property="og:url" content="https://www.pescariasutac.ro/rezervari.html">
+<link rel="icon" href="assets/img/logo  sutac 9 (1).png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --seafoam: #4bb8c4;
+  --gold: #c9a84c;
+  --cream: #f5f0e8;
+  --bg: #122840;
+  --bg-form: #0d1117;
+  --border: rgba(255,255,255,.08);
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+body { background: var(--bg); font-family: 'Raleway', sans-serif; color: var(--cream); overflow-x: hidden; display: flex; flex-direction: column; }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+
+/* ── NAV ── */
+.s-header { background: rgba(6,24,32,.97); border-bottom: 1px solid rgba(201,168,76,.35); box-shadow: 0 2px 30px rgba(0,0,0,.4); position: sticky; top: 0; z-index: 100; }
+.s-nav { display: flex; align-items: center; justify-content: space-between; padding: 24px 60px; max-width: 1400px; margin: 0 auto; }
+.s-logo img { height: 56px; width: auto; mix-blend-mode: screen; }
+.s-nav-links { display: flex; list-style: none; gap: 44px; align-items: center; }
+.s-nav-links a { color: rgba(245,240,232,.9); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; transition: color .25s; }
+.s-nav-links a:hover { color: var(--cream); }
+.s-nav-back { color: rgba(245,240,232,.5) !important; display: inline-flex; align-items: center; gap: 8px; }
+.s-nav-back:hover { color: var(--cream) !important; }
+.s-hamburger { display: none; flex-direction: column; gap: 6px; background: none; border: none; cursor: pointer; padding: 5px; }
+.s-hamburger span { display: block; width: 26px; height: 1.5px; background: var(--cream); transition: all .3s; }
+.s-hamburger.active span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.s-hamburger.active span:nth-child(2) { opacity: 0; }
+.s-hamburger.active span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+.s-mobile-menu { display: none; position: fixed; inset: 0; background: var(--bg); z-index: 999; flex-direction: column; align-items: center; justify-content: center; }
+.s-mobile-menu.open { display: flex; }
+.s-mobile-menu ul { list-style: none; text-align: center; }
+.s-mobile-menu li { margin: 16px 0; }
+.s-mobile-menu a { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 5vw, 38px); color: var(--cream); font-style: italic; }
+.s-mobile-menu a:hover { color: var(--gold); }
+@media (max-width: 960px) { .s-nav { padding: 16px 24px; } .s-nav-links { display: none; } .s-hamburger { display: flex; } }
+
+/* ── BOOKING LAYOUT ── */
+.booking-wrap { display: grid; grid-template-columns: 1fr 1fr; flex: 1; min-height: calc(100vh - 85px); }
+
+.map-col { position: relative; overflow: hidden; }
+.map-col iframe { width: 100%; height: 100%; border: 0; display: block; filter: grayscale(1) invert(1) contrast(1.1) brightness(.8); }
+.map-col::after {
+  content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 60px;
+  background: linear-gradient(90deg, transparent, var(--bg-form));
+  pointer-events: none;
+}
+
+.form-col {
+  background: var(--bg-form); padding: 70px 60px;
+  display: flex; flex-direction: column; justify-content: center;
+  overflow-y: auto;
+}
+
+.form-eyebrow { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--seafoam); font-weight: 700; margin-bottom: 14px; display: block; }
+.form-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 3.5vw, 48px); color: var(--cream); font-weight: 400; line-height: 1.15; margin-bottom: 10px; }
+.form-title em { font-style: italic; color: var(--gold); }
+.form-sub { font-size: 15px; color: rgba(245,240,232,.68); font-weight: 300; line-height: 1.8; margin-bottom: 40px; }
+.form-divider { width: 40px; height: 1px; background: linear-gradient(90deg, var(--gold), transparent); margin: 16px 0 32px; }
+
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.field { margin-bottom: 14px; }
+.field label { display: block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(245,240,232,.55); font-weight: 700; margin-bottom: 8px; }
+
+.field input,
+.field select {
+  width: 100%; background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  color: var(--cream); padding: 15px 16px;
+  font-family: 'Raleway', sans-serif; font-size: 16px; font-weight: 300;
+  outline: none; transition: border-color .25s, background .25s;
+  -webkit-appearance: none; appearance: none;
+  border-radius: 0;
+}
+.field input:focus, .field select:focus {
+  border-color: rgba(201,168,76,.5);
+  background: rgba(255,255,255,.07);
+}
+.field input::placeholder { color: rgba(245,240,232,.25); }
+.field select option { background: #0d1117; color: var(--cream); }
+
+.select-wrap { position: relative; }
+.select-wrap::after {
+  content: ''; position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
+  width: 0; height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgba(201,168,76,.6);
+  pointer-events: none;
+}
+
+.time-date-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+
+.bot-check {
+  background: rgba(201,168,76,.04); border: 1px dashed rgba(201,168,76,.2);
+  padding: 16px; margin-bottom: 20px;
+}
+.bot-check label { display: block; font-size: 12px; color: rgba(245,240,232,.5); margin-bottom: 10px; }
+.bot-check input { width: 100%; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); color: var(--cream); padding: 12px 14px; font-family: 'Raleway', sans-serif; font-size: 16px; outline: none; transition: border-color .25s; border-radius: 0; }
+.bot-check input:focus { border-color: rgba(201,168,76,.4); }
+
+.privacy-note { font-size: 12px; color: rgba(245,240,232,.5); line-height: 1.7; margin-bottom: 24px; }
+.privacy-note a { color: rgba(245,240,232,.65); text-decoration: underline; }
+
+.submit-btn {
+  width: 100%; background: var(--gold); color: var(--bg);
+  border: none; padding: 18px; cursor: pointer;
+  font-family: 'Raleway', sans-serif; font-size: 11px;
+  font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+  transition: all .3s; display: flex; align-items: center; justify-content: center; gap: 10px;
+}
+.submit-btn:hover { background: #d4b457; transform: translateY(-1px); }
+.submit-btn:active { transform: translateY(0); }
+
+.contact-info { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--border); display: flex; gap: 30px; flex-wrap: wrap; }
+.contact-item { display: flex; align-items: center; gap: 10px; }
+.contact-item svg { color: var(--seafoam); flex-shrink: 0; }
+.contact-item span { font-size: 13px; color: rgba(245,240,232,.62); font-weight: 300; }
+.contact-item a { color: var(--cream); font-size: 14px; font-weight: 400; transition: color .25s; }
+.contact-item a:hover { color: var(--gold); }
+
+@media (max-width: 960px) {
+  .booking-wrap { grid-template-columns: 1fr; }
+  .map-col { height: 50vw; min-height: 280px; max-height: 380px; }
+  .map-col::after { display: none; }
+  .form-col { padding: 50px 32px; }
+  .field-row { grid-template-columns: 1fr; gap: 0; }
+}
+@media (max-width: 480px) {
+  .form-col { padding: 40px 20px; }
+  .time-date-row { grid-template-columns: 1fr; }
+  .contact-info { flex-direction: column; gap: 16px; }
+}
+
+/* ── FOOTER ── */
+.s-footer-mini {
+  background: var(--bg-form); border-top: 1px solid rgba(255,255,255,.05);
+  padding: 20px 60px; display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 10px;
+}
+.s-footer-mini p { font-size: 11px; color: rgba(245,240,232,.25); letter-spacing: 1px; }
+.s-footer-mini a { font-size: 11px; color: rgba(245,240,232,.25); margin-left: 20px; }
+.s-footer-mini a:hover { color: rgba(245,240,232,.5); }
+@media (max-width: 600px) { .s-footer-mini { padding: 16px 20px; flex-direction: column; align-items: flex-start; } }
+
+/* ── MOBILE GLOBAL ── */
+@media (max-width: 768px) {
+  .s-header { position: sticky; }
+  .booking-wrap { min-height: unset; }
+  .map-col { height: 55vw; min-height: 240px; max-height: 340px; }
+  .form-col { padding: 48px 24px 56px; }
+  .form-title { font-size: clamp(28px,9vw,44px); }
+  .form-divider { margin: 14px 0 26px; }
+  .form-sub { margin-bottom: 32px; }
+  .submit-btn { min-height: 56px; font-size: 12px; padding: 18px 24px; }
+  .field-row { grid-template-columns: 1fr; gap: 0; }
+  .bot-check { padding: 14px; }
+  .s-hamburger { padding: 12px; }
+  .s-nav { padding: 14px 16px; }
+  .s-logo img { height: 44px; }
+  .s-mobile-menu a { font-size: clamp(24px,7vw,36px); }
+}
+@media (max-width: 400px) {
+  .form-col { padding: 36px 16px 48px; }
+  .time-date-row { grid-template-columns: 1fr; }
+  .contact-info { margin-top: 28px; padding-top: 22px; gap: 14px; }
+  .contact-item a { font-size: 15px; }
+}
+
+/* ── OCEAN AMBIANCE ── */
+body {
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(20,100,145,1) 0%, transparent 70%),
+    radial-gradient(ellipse at 80% 80%, rgba(35,148,165,1) 0%, transparent 70%),
+    var(--bg);
+  background-attachment: fixed;
+}
+@media (max-width: 768px) { body { background-attachment: scroll; } }
+.form-col {
+  background-image:
+    radial-gradient(ellipse at 20% 25%, rgba(20,100,145,1) 0%, transparent 70%),
+    radial-gradient(ellipse at 85% 80%, rgba(35,148,165,.95) 0%, transparent 65%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath fill='%234bb8c4' opacity='.18' d='M10 25 Q30 5 60 25 Q30 45 10 25Z M60 25 L80 10 L75 25 L80 40Z'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath fill='%234bb8c4' opacity='.18' d='M90 25 Q70 5 40 25 Q70 45 90 25Z M40 25 L20 10 L25 25 L20 40Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0 0, 0 0, 90% 15%, 85% 85%;
+  background-size: 100% 100%, 100% 100%, 200px, 240px;
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="s-header">
+  <nav class="s-nav">
+    <a href="index.html" class="s-logo">
+      <img src="assets/img/logo orig.jpeg" alt="Pescăria Sutac">
+    </a>
+    <ul class="s-nav-links">
+      <li>
+        <a href="index.html" class="s-nav-back">
+          <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+            <path d="M5 1L1 5l4 4M1 5h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Înapoi
+        </a>
+      </li>
+      <li><a href="meniu.html">Meniu</a></li>
+      <li><a href="about.html">Evenimente</a></li>
+    </ul>
+    <button class="s-hamburger" id="hamburger" aria-label="Deschide meniu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<div class="s-mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="index.html">Acasă</a></li>
+    <li><a href="povestea.html">Povestea</a></li>
+    <li><a href="about.html">Evenimente</a></li>
+    <li><a href="meniu.html">Meniu</a></li>
+  </ul>
+</div>
+
+<!-- BOOKING -->
+<main class="booking-wrap">
+
+  <!-- MAP -->
+  <div class="map-col">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2852.385854473929!2d28.694222486827098!3d44.36366603162866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40ba59268312935f%3A0xa1fdd4e4cd6283e9!2sRestaurant%20Pescaria%20Sutac!5e0!3m2!1sro!2sro!4v1774253667794!5m2!1sro!2sro"
+      title="Locația Pescăria Sutac pe hartă"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <!-- FORM -->
+  <div class="form-col">
+    <span class="form-eyebrow">Plaja Corbu</span>
+    <h1 class="form-title">Rezervă<br><em>o masă</em></h1>
+    <div class="form-divider"></div>
+    <p class="form-sub">Te așteptăm pe malul mării pentru o experiență culinară autentică. Confirmarea rezervării se face prin WhatsApp.</p>
+
+    <form id="whatsappForm" novalidate>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="nume_client">Nume complet</label>
+          <input type="text" id="nume_client" placeholder="Ionescu Alexandru" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="telefon_client">Număr telefon</label>
+          <input type="tel" id="telefon_client" placeholder="+40 700 000 000" required autocomplete="tel">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="persoane">Număr persoane</label>
+        <input type="number" id="persoane" min="1" max="200" placeholder="ex: 4" inputmode="numeric">
+      </div>
+
+      <div class="time-date-row">
+        <div class="field">
+          <label for="time">Ora sosirii</label>
+          <input type="time" id="time" value="19:00">
+        </div>
+        <div class="field">
+          <label for="date">Data</label>
+          <input type="date" id="date">
+        </div>
+      </div>
+
+      <div class="bot-check">
+        <label>Verificare anti-robot: Cât face 3 + 4?</label>
+        <input type="number" id="bot_answer" placeholder="Răspunsul tău" required min="0" max="99">
+      </div>
+
+      <p class="privacy-note">
+        Prin trimiterea acestui formular ești de acord cu procesarea datelor personale în scopul confirmării rezervării. Datele nu vor fi stocate în baze de date de marketing.
+        <a href="termene.html">Află mai multe.</a>
+      </p>
+
+      <button type="submit" class="submit-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        Trimite pe WhatsApp
+      </button>
+
+    </form>
+
+    <div class="contact-info">
+      <div class="contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+        <div>
+          <a href="tel:+40730292776">+40 730 292 776</a>
+          <span>Rezervări &amp; Info</span>
+        </div>
+      </div>
+      <div class="contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+        </svg>
+        <div>
+          <a href="https://maps.app.goo.gl/LqXJBEXyGk9vnfK48" target="_blank" rel="noopener">Plaja Corbu, Constanța</a>
+          <span>Zilnic 10:30 — 22:30</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="s-footer-mini">
+  <p>© 2026 PESCĂRIA SUTAC. TOATE DREPTURILE REZERVATE.</p>
+  <div>
+    <a href="termene.html">Privacy</a>
+    <a href="cookies.html">Cookies</a>
+  </div>
+</footer>
+
+<script>
+  // Set today's date as default
+  const dateInput = document.getElementById('date');
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const dd = String(today.getDate()).padStart(2, '0');
+  dateInput.value = `${yyyy}-${mm}-${dd}`;
+  dateInput.min = `${yyyy}-${mm}-${dd}`;
+
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  }));
+
+  // WhatsApp form
+  document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const raspuns = document.getElementById('bot_answer').value;
+    if (raspuns !== '7') {
+      alert('Răspuns incorect la verificarea anti-robot! Răspunsul corect este 7.');
+      return;
+    }
+
+    const nume = document.getElementById('nume_client').value.trim();
+    const tel = document.getElementById('telefon_client').value.trim();
+    const nrPers = document.getElementById('persoane').value.trim();
+    const ora = document.getElementById('time').value;
+    const data = document.getElementById('date').value;
+
+    if (!nume || !tel) {
+      alert('Te rugăm să completezi numele și numărul de telefon.');
+      return;
+    }
+
+    const telDest = '40730292776';
+    const msg = `Salut! Rezervare nouă:%0A%0A` +
+                `👤 *Nume:* ${encodeURIComponent(nume)}%0A` +
+                `📞 *Tel:* ${encodeURIComponent(tel)}%0A` +
+                `👥 *Pers:* ${encodeURIComponent(nrPers)}%0A` +
+                `📅 *Data:* ${data}%0A` +
+                `🕒 *Ora:* ${ora}`;
+
+    window.open(`https://wa.me/${telDest}?text=${msg}`, '_blank');
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,600 @@
+﻿<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evenimente | Pescăria Sutac — Plaja Corbu</title>
+<meta name="description" content="Organizează-ți evenimentul perfect la Pescăria Sutac — aniversări, petreceri, serbări. Exclusivitate totală pe malul mării, Plaja Corbu.">
+<meta property="og:title" content="Evenimente — Pescăria Sutac">
+<meta property="og:image" content="assets/img/og-image-sutac.jpg">
+<meta property="og:url" content="https://www.pescariasutac.ro/about.html">
+<link rel="icon" href="assets/img/logo  sutac 9 (1).png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
+<style>
+:root {
+  --seafoam: #4bb8c4;
+  --gold: #c9a84c;
+  --cream: #f5f0e8;
+  --bg: #122840;
+  --bg-alt: #0d1117;
+  --ocean: #0e4d6c;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); font-family: 'Raleway', sans-serif; color: var(--cream); overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+
+/* ── NAV ── */
+.s-header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(6,24,32,.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(201,168,76,.2); transition: background .4s, border-color .4s, box-shadow .4s; }
+.s-header.scrolled { background: rgba(6,24,32,.97); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid rgba(201,168,76,.35); box-shadow: 0 4px 40px rgba(0,0,0,.45); }
+.s-nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 60px; max-width: 1400px; margin: 0 auto; }
+.s-logo img { height: 56px; width: auto; mix-blend-mode: screen; }
+.s-nav-links { display: flex; list-style: none; gap: 44px; align-items: center; }
+.s-nav-links a { color: rgba(245,240,232,.92); font-family: 'Raleway', sans-serif; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; transition: color .25s; position: relative; }
+.s-nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 100%; height: 1px; background: var(--gold); transition: right .3s; }
+.s-nav-links a:hover { color: var(--cream); }
+.s-nav-links a:hover::after { right: 0; }
+.s-nav-cta { padding: 12px 30px !important; border: 1px solid rgba(201,168,76,.75) !important; color: var(--gold) !important; transition: background .3s, color .3s !important; }
+.s-nav-cta::after { display: none !important; }
+.s-nav-cta:hover { background: var(--gold) !important; color: var(--bg) !important; }
+.s-hamburger { display: none; flex-direction: column; gap: 6px; background: none; border: none; cursor: pointer; padding: 6px; z-index: 1001; }
+.s-hamburger span { display: block; width: 28px; height: 2px; background: var(--cream); transition: all .3s; }
+.s-hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.s-hamburger.active span:nth-child(2) { opacity: 0; }
+.s-hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+.s-mobile-menu { display: none; position: fixed; inset: 0; background: var(--bg); z-index: 999; flex-direction: column; align-items: center; justify-content: center; }
+.s-mobile-menu.open { display: flex; }
+.s-mobile-menu ul { list-style: none; text-align: center; }
+.s-mobile-menu li { margin: 18px 0; }
+.s-mobile-menu a { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px,5vw,40px); color: var(--cream); font-style: italic; }
+.s-mobile-menu a:hover { color: var(--gold); }
+@media (max-width: 960px) { .s-nav { padding: 20px 24px; } .s-logo img { height: 54px; } .s-nav-links { display: none; } .s-hamburger { display: flex; } }
+
+/* ── UTILITIES ── */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
+.s-tag { font-family: 'Raleway', sans-serif; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--seafoam); font-weight: 700; display: block; margin-bottom: 12px; }
+.s-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px,4vw,48px); color: var(--cream); font-weight: 400; line-height: 1.2; }
+.s-title span { color: var(--gold); font-style: italic; }
+.s-divider { width: 50px; height: 1px; background: linear-gradient(90deg, var(--gold), transparent); margin: 16px 0 26px; }
+.s-text { font-size: 16px; color: rgba(245,240,232,.88); line-height: 2.05; font-weight: 300; }
+@media (max-width: 768px) { .container { padding: 0 24px; } }
+
+/* ── PAGE HERO ── */
+.page-hero {
+  height: 70vh; min-height: 400px;
+  background-image: url('assets/img/about_bg.jpg');
+  background-size: cover; background-position: center;
+  position: relative; display: flex; align-items: flex-end; padding-bottom: 80px;
+}
+.page-hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(6,24,32,.88) 0%, rgba(6,24,32,.18) 35%, rgba(6,24,32,.04) 100%); }
+.page-hero-content { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 0 60px; width: 100%; }
+.page-hero-eyebrow { font-family: 'Raleway', sans-serif; font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: var(--seafoam); font-weight: 700; margin-bottom: 14px; display: block; }
+.page-hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px,6vw,70px); color: var(--cream); font-weight: 400; font-style: italic; line-height: 1.1; }
+@media (max-width: 768px) { .page-hero-content { padding: 0 24px; } .page-hero { padding-bottom: 50px; } }
+
+/* ── EVENTS INTRO ── */
+.events-intro { padding: 100px 0; background: var(--bg); }
+.events-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.events-img { position: relative; overflow: hidden; }
+.events-img img { width: 100%; height: 520px; object-fit: cover; filter: brightness(.85); transition: transform .6s; }
+.events-img:hover img { transform: scale(1.03); }
+.events-img::after { content: ''; position: absolute; bottom: -16px; right: -16px; width: 55%; height: 55%; border: 1px solid rgba(201,168,76,.2); pointer-events: none; }
+.feat-list { list-style: none; margin: 28px 0 36px; }
+.feat-list li { display: flex; gap: 14px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,.06); }
+.feat-list li::before { content: ''; display: block; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; flex-shrink: 0; margin-top: 7px; }
+.feat-title { font-size: 13px; color: var(--seafoam); font-weight: 700; letter-spacing: 1px; display: block; margin-bottom: 4px; text-transform: uppercase; font-size: 11px; }
+.feat-desc { font-size: 15px; color: rgba(245,240,232,.78); line-height: 1.8; font-weight: 300; }
+.s-btn-wa {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: #25d366; color: #fff;
+  padding: 14px 32px; font-family: 'Raleway', sans-serif;
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 700;
+  transition: all .3s; border: none; cursor: pointer;
+}
+.s-btn-wa:hover { background: #1ebe5c; }
+.s-btn-wa svg { flex-shrink: 0; }
+
+@media (max-width: 900px) {
+  .events-grid { grid-template-columns: 1fr; gap: 50px; }
+  .events-img img { height: 320px; }
+  .events-img::after { display: none; }
+  .events-intro { padding: 70px 0; }
+}
+
+/* ── EVENTS TEAM ── */
+.events-team { padding: 80px 0; background: var(--bg-alt); }
+.events-team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.events-team-grid .events-img { order: 2; }
+.events-team-grid .events-text { order: 1; }
+.events-team-img img { width: 100%; height: 440px; object-fit: cover; filter: brightness(.85); }
+
+@media (max-width: 900px) {
+  .events-team-grid { grid-template-columns: 1fr; gap: 40px; }
+  .events-team-grid .events-img { order: 0; }
+  .events-team { padding: 60px 0; }
+}
+
+/* ── GALLERY ── */
+.gallery-section { padding: 100px 0; background: var(--bg); }
+.gallery-section .section-head { text-align: center; margin-bottom: 50px; }
+.gallery-item { overflow: hidden; position: relative; }
+.gallery-item img { width: 100%; height: 340px; object-fit: cover; filter: brightness(.8) contrast(1.05); transition: transform .5s, filter .5s; }
+.gallery-item:hover img { transform: scale(1.04); filter: brightness(1) contrast(1.05); }
+.gallery-controls { display: flex; align-items: center; justify-content: center; gap: 24px; margin-top: 36px; }
+.s-btn-nav { width: 48px; height: 48px; background: rgba(14,77,108,.3); border: 1px solid rgba(75,184,196,.25); color: var(--cream); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all .25s; }
+.s-btn-nav:hover { background: rgba(201,168,76,.15); border-color: var(--gold); color: var(--gold); }
+.gallery-pagination .swiper-pagination-bullet { background: rgba(245,240,232,.25); opacity: 1; width: 6px; height: 6px; }
+.gallery-pagination .swiper-pagination-bullet-active { background: var(--gold); width: 20px; border-radius: 3px; }
+
+@media (max-width: 768px) { .gallery-section { padding: 70px 0; } .gallery-item img { height: 220px; } }
+.gallery-outer { padding: 0 60px; }
+@media (max-width: 960px) { .gallery-outer { padding: 0 20px; } }
+@media (max-width: 480px) { .gallery-outer { padding: 0 12px; } }
+
+/* ── TESTIMONIALS ── */
+.testimonials { padding: 100px 0; background: var(--bg-alt); overflow: hidden; }
+.testimonials .section-head { text-align: center; margin-bottom: 60px; }
+.testimonial-card {
+  background: rgba(8,30,44,.7); border: 1px solid rgba(75,184,196,.12);
+  padding: 50px 56px; position: relative; border-radius: 2px;
+  backdrop-filter: blur(10px); max-width: 700px; margin: 0 auto;
+}
+.testimonial-card::before {
+  content: '\201C';
+  font-family: 'Cormorant Garamond', serif; font-size: 120px;
+  color: rgba(201,168,76,.1); position: absolute; top: -10px; left: 30px;
+  line-height: 1; pointer-events: none;
+}
+.testimonial-text {
+  font-family: 'Cormorant Garamond', serif; font-size: clamp(15px,2vw,18px);
+  color: rgba(245,240,232,.8); font-style: italic; line-height: 1.8; margin-bottom: 30px;
+  position: relative; z-index: 1;
+}
+.testimonial-author { display: flex; align-items: center; gap: 12px; }
+.testimonial-dot { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+.testimonial-name { font-family: 'Raleway', sans-serif; font-size: 13px; color: var(--cream); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+.testimonial-stars { color: var(--gold); font-size: 13px; letter-spacing: 2px; margin-top: 3px; }
+
+.testimonials-nav { display: flex; justify-content: center; gap: 20px; margin-top: 40px; }
+
+@media (max-width: 768px) {
+  .testimonial-card { padding: 36px 28px; }
+  .testimonials { padding: 70px 0; }
+}
+
+/* ── FOOTER ── */
+.s-footer { background: var(--bg-alt); border-top: 1px solid rgba(255,255,255,.05); padding: 70px 0 30px; }
+.s-footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
+.s-footer-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 40px; padding-bottom: 50px; border-bottom: 1px solid rgba(255,255,255,.05); margin-bottom: 30px; }
+.s-footer-col h4 { font-family: 'Raleway', sans-serif; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; font-weight: 700; }
+.s-footer-col p, .s-footer-col a { color: rgba(245,240,232,.78); font-size: 15px; line-height: 1.9; display: block; font-weight: 300; }
+.s-footer-col a:hover { color: var(--cream); }
+.s-footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.s-footer-copy { font-size: 11px; color: rgba(245,240,232,.25); letter-spacing: 1px; }
+.s-footer-legal { display: flex; gap: 20px; }
+.s-footer-legal a { font-size: 11px; color: rgba(245,240,232,.25); }
+.s-footer-legal a:hover { color: rgba(245,240,232,.5); }
+.s-anpc { display: flex; gap: 8px; margin-top: 14px; }
+.s-anpc-badge { border: 1px solid rgba(255,255,255,.15); padding: 6px 8px; text-align: center; border-radius: 2px; }
+.s-anpc-badge:hover { border-color: rgba(255,255,255,.35); }
+.s-anpc-badge span { display: block; font-size: 8px; color: rgba(255,255,255,.65); font-weight: 700; letter-spacing: .5px; }
+.s-anpc-badge small { font-size: 6px; color: rgba(255,255,255,.3); text-transform: uppercase; }
+@media (max-width: 768px) { .s-footer-grid { grid-template-columns: 1fr 1fr; } .s-footer-inner { padding: 0 24px; } .s-footer-bottom { flex-direction: column; align-items: flex-start; } }
+@media (max-width: 480px) { .s-footer-grid { grid-template-columns: 1fr; } }
+
+/* ── MOBILE GLOBAL ── */
+@media (max-width: 768px) {
+  .page-hero { background-attachment: scroll; min-height: 300px; height: 60vw; padding-bottom: 44px; }
+  .page-hero-content { padding: 0 20px; }
+  .page-hero-title { font-size: clamp(30px,9vw,48px); }
+  .events-intro { padding: 64px 0; }
+  .events-team { padding: 56px 0; }
+  .events-img img { height: 260px; }
+  .s-btn-wa { width: 100%; justify-content: center; padding: 16px 20px; font-size: 11px; }
+  .testimonial-card { padding: 32px 22px; }
+  .testimonial-card::before { font-size: 80px; top: -5px; left: 18px; }
+  .testimonial-text { font-size: 15px; line-height: 1.75; }
+  .s-btn-nav { width: 52px; height: 52px; }
+  .s-hamburger { padding: 12px; }
+  .testimonials { padding: 70px 0; }
+  .s-footer { padding: 56px 0 24px; }
+  .cookie-btns { width: 100%; }
+  #accept-cookies, #reject-cookies { flex: 1; padding: 13px 10px; }
+}
+@media (max-width: 480px) {
+  .page-hero-title { font-size: clamp(26px,10vw,38px); }
+  .s-nav { padding: 14px 16px; }
+  .s-logo img { height: 44px; }
+  .container { padding: 0 16px; }
+  .feat-list li { gap: 10px; }
+}
+
+/* ── SCROLL UP ── */
+.s-scrollup { position: fixed; bottom: 28px; right: 28px; width: 44px; height: 44px; background: rgba(6,24,32,.85); border: 1px solid rgba(201,168,76,.4); color: var(--gold); cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: all .3s; z-index: 800; }
+.s-scrollup.visible { opacity: 1; pointer-events: auto; }
+.s-scrollup:hover { background: var(--gold); color: var(--bg); }
+
+/* ── COOKIE ── */
+#cookie-banner { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: rgba(6,24,32,.97); border-top: 1px solid rgba(201,168,76,.25); padding: 18px 40px; z-index: 9999; align-items: center; gap: 20px; flex-wrap: wrap; backdrop-filter: blur(10px); }
+#cookie-banner.show { display: flex; }
+#cookie-banner p { flex: 1; font-size: 12px; color: rgba(245,240,232,.6); line-height: 1.6; margin: 0; min-width: 200px; }
+#cookie-banner a { color: var(--gold); text-decoration: underline; }
+.cookie-btns { display: flex; gap: 10px; }
+#accept-cookies { background: var(--gold); color: var(--bg); border: none; padding: 10px 22px; cursor: pointer; font-weight: 700; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-family: 'Raleway', sans-serif; }
+#reject-cookies { background: transparent; color: rgba(245,240,232,.4); border: 1px solid rgba(245,240,232,.15); padding: 10px 22px; cursor: pointer; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-family: 'Raleway', sans-serif; }
+
+/* ── OCEAN AMBIANCE ── */
+body {
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(20,100,145,1) 0%, transparent 70%),
+    radial-gradient(ellipse at 80% 80%, rgba(35,148,165,1) 0%, transparent 70%),
+    var(--bg);
+  background-attachment: fixed;
+}
+@media (max-width: 768px) { body { background-attachment: scroll; } }
+.events-intro, .gallery-section {
+  background-image:
+    radial-gradient(ellipse at 20% 30%, rgba(20,100,145,1) 0%, transparent 70%),
+    radial-gradient(ellipse at 82% 72%, rgba(35,148,165,.95) 0%, transparent 65%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath fill='%234bb8c4' opacity='.22' d='M10 25 Q30 5 60 25 Q30 45 10 25Z M60 25 L80 10 L75 25 L80 40Z'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath fill='%234bb8c4' opacity='.22' d='M90 25 Q70 5 40 25 Q70 45 90 25Z M40 25 L20 10 L25 25 L20 40Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0 0, 0 0, 4% 35%, 91% 62%;
+  background-size: 100% 100%, 100% 100%, 200px, 250px;
+}
+.events-team, .testimonials, .s-footer {
+  background-image:
+    radial-gradient(ellipse at 78% 25%, rgba(20,100,145,1) 0%, transparent 70%),
+    radial-gradient(ellipse at 18% 78%, rgba(35,148,165,.92) 0%, transparent 65%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath fill='%234bb8c4' opacity='.18' d='M90 25 Q70 5 40 25 Q70 45 90 25Z M40 25 L20 10 L25 25 L20 40Z'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath fill='%234bb8c4' opacity='.18' d='M10 25 Q30 5 60 25 Q30 45 10 25Z M60 25 L80 10 L75 25 L80 40Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0 0, 0 0, 87% 30%, 6% 75%;
+  background-size: 100% 100%, 100% 100%, 220px, 180px;
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="s-header" id="sHeader">
+  <nav class="s-nav">
+    <a href="index.html" class="s-logo">
+      <img src="assets/img/logo orig.jpeg" alt="Pescăria Sutac">
+    </a>
+    <ul class="s-nav-links">
+      <li><a href="index.html">Acasă</a></li>
+      <li><a href="povestea.html">Povestea</a></li>
+      <li><a href="about.html">Evenimente</a></li>
+      <li><a href="meniu.html">Meniu</a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=100090660430181" target="_blank" rel="noopener">Facebook</a></li>
+      <li><a href="rezervari.html" class="s-nav-cta">Rezervă</a></li>
+    </ul>
+    <button class="s-hamburger" id="hamburger" aria-label="Deschide meniu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<div class="s-mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="index.html">Acasă</a></li>
+    <li><a href="povestea.html">Povestea</a></li>
+    <li><a href="about.html">Evenimente</a></li>
+    <li><a href="meniu.html">Meniu</a></li>
+    <li><a href="https://www.facebook.com/profile.php?id=100090660430181" target="_blank" rel="noopener">Facebook</a></li>
+    <li><a href="rezervari.html">Rezervă</a></li>
+  </ul>
+</div>
+
+<main>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+</section>
+
+<!-- EVENTS INTRO -->
+<section class="events-intro">
+  <div class="container">
+    <div class="events-grid">
+      <div class="events-text">
+        <span class="s-tag">Organizează-ți evenimentul</span>
+        <h2 class="s-title">Exclusivitate<br><span>totală</span>, pe malul mării</h2>
+        <div class="s-divider"></div>
+        <p class="s-text">Dacă ești în căutarea locației ideale pentru serbarea de sfârșit de an, o aniversare memorabilă sau pur și simplu o petrecere între prieteni, noi avem ingredientele perfecte.</p>
+
+        <ul class="feat-list">
+          <li>
+            <span></span>
+            <div>
+              <span class="feat-title">Exclusivitate totală</span>
+              <span class="feat-desc">Sala de evenimente este a voastră pentru întreaga zi! Fără grabă, fără alte grupuri – doar voi și invitații voștri, într-un cadru intim și sigur.</span>
+            </div>
+          </li>
+          <li>
+            <span></span>
+            <div>
+              <span class="feat-title">Adrenalină și joacă</span>
+              <span class="feat-desc">Copiii se pot bucura de timp nelimitat la toboganul gonflabil și la locul de joacă exterior. Energia lor nu are limite, nici distracția nu ar trebui să aibă!</span>
+            </div>
+          </li>
+        </ul>
+
+        <a href="https://wa.me/40730292776?text=Bun%C4%83%20ziua!%20Doresc%20mai%20multe%20detalii%20despre%20rezervarea%20unei%20petreceri."
+           class="s-btn-wa" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Rezervă pe WhatsApp
+        </a>
+      </div>
+      <div class="events-img">
+        <img src="assets/img/img 3.jpg" alt="Eveniment la Pescăria Sutac" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM / DETAILS -->
+<section class="events-team">
+  <div class="container">
+    <div class="events-team-grid">
+      <div class="events-text">
+        <span class="s-tag">Echipa noastră</span>
+        <h2 class="s-title">Creativitate<br><span>fără bariere</span></h2>
+        <div class="s-divider"></div>
+        <ul class="feat-list">
+          <li>
+            <span></span>
+            <div>
+              <span class="feat-title">Decor personalizat</span>
+              <span class="feat-desc">Vrei un decor tematic cu super-eroi sau o lume de basm? Ai libertate deplină să decorezi spațiul și să aduci animatori sau mascote care să întrețină atmosfera.</span>
+            </div>
+          </li>
+          <li>
+            <span></span>
+            <div>
+              <span class="feat-title">Oameni cu suflet</span>
+              <span class="feat-desc">Suntem tineri, joviali și mereu cu zâmbetul pe buze! Ne asigurăm că totul decurge perfect, ca tu, ca părinte, să te bucuri de eveniment la fel de mult ca cei mici.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="events-img">
+        <img src="assets/img/ech.jpg" alt="Echipa Pescăria Sutac" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS GALLERY -->
+<section class="gallery-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="s-tag" style="text-align:center;">Momente</span>
+      <h2 class="s-title" style="text-align:center;">Galerie Evenimente</h2>
+    </div>
+  </div>
+  <div class="gallery-outer">
+    <div class="swiper ev-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><div class="gallery-item"><img src="assets/img/ev1.jpg" alt="Eveniment Sutac" loading="lazy"></div></div>
+        <div class="swiper-slide"><div class="gallery-item"><img src="assets/img/ev2.jpg" alt="Eveniment Sutac" loading="lazy"></div></div>
+        <div class="swiper-slide"><div class="gallery-item"><img src="assets/img/ev3.jpg" alt="Eveniment Sutac" loading="lazy"></div></div>
+        <div class="swiper-slide"><div class="gallery-item"><img src="assets/img/ev4.jpg" alt="Eveniment Sutac" loading="lazy"></div></div>
+        <div class="swiper-slide"><div class="gallery-item"><img src="assets/img/ev5.jpg" alt="Eveniment Sutac" loading="lazy"></div></div>
+        <div class="swiper-slide"><div class="gallery-item"><img src="assets/img/ev6.jpg" alt="Eveniment Sutac" loading="lazy"></div></div>
+        <div class="swiper-slide"><div class="gallery-item"><img src="assets/img/ev7.jpg" alt="Eveniment Sutac" loading="lazy"></div></div>
+        <div class="swiper-slide"><div class="gallery-item"><img src="assets/img/ev8.jpg" alt="Eveniment Sutac" loading="lazy"></div></div>
+        <div class="swiper-slide"><div class="gallery-item"><img src="assets/img/ev9.jpg" alt="Eveniment Sutac" loading="lazy"></div></div>
+      </div>
+    </div>
+    <div class="gallery-controls">
+      <button class="s-btn-nav ev-prev" aria-label="Anterior">
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
+          <path d="M6 1L1 6l5 5M1 6h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="ev-pagination"></div>
+      <button class="s-btn-nav ev-next" aria-label="Următor">
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
+          <path d="M10 1l5 5-5 5M15 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-head">
+      <span class="s-tag" style="text-align:center;">Ce spun clienții</span>
+      <h2 class="s-title" style="text-align:center;">Recenzii</h2>
+    </div>
+    <div class="swiper t-swiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <p class="testimonial-text">"Absolut delicios! Am mâncat la multe restaurante cu specific pescăresc, dar niciodată nu am fost la fel de încântată de mâncare. Porțiile foarte generoase, iar prețurile de bun simț. Recomand cu încredere!"</p>
+            <div class="testimonial-author">
+              <div class="testimonial-dot"></div>
+              <div>
+                <p class="testimonial-name">Mădălina Popica</p>
+                <p class="testimonial-stars">★★★★★</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <p class="testimonial-text">"O experiență f plăcută!!! Un loc liniștit, cu o atmosferă caldă și o mâncare f bună, porții generoase cu prețuri decente!!! Un restaurant curat, cu o servire ireproșabilă! Vom reveni cu siguranță!"</p>
+            <div class="testimonial-author">
+              <div class="testimonial-dot"></div>
+              <div>
+                <p class="testimonial-name">Cristina Mihaela Barbu</p>
+                <p class="testimonial-stars">★★★★★</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <p class="testimonial-text">"O pescărie care merită toată aprecierea! Peștele este proaspăt și gătit perfect, iar aperitivele sunt variate și pline de gust. Atmosfera este plăcută, iar personalul amabil și atent. Un loc ideal!"</p>
+            <div class="testimonial-author">
+              <div class="testimonial-dot"></div>
+              <div>
+                <p class="testimonial-name">Monalisa Radu</p>
+                <p class="testimonial-stars">★★★★★</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <p class="testimonial-text">"Am organizat aici o mică petrecere de familie și totul a fost impecabil. De la decorul sălii până la promptitudinea servitului. Copiii s-au simțit în largul lor la locul de joacă, iar mâncarea a fost punctul forte al serii."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-dot"></div>
+              <div>
+                <p class="testimonial-name">Andrei Ionescu</p>
+                <p class="testimonial-stars">★★★★★</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <p class="testimonial-text">"Nu ne-am putut potoli pofta și am revenit din nou pe terasa Restaurantului Sutac. Tind să cred că este cam cel mai bun local pescăresc de pe litoralul românesc. Palamida cu legume pe plită — o delicatese! Mulțumim lui Raul pentru servirea ireproșabilă!"</p>
+            <div class="testimonial-author">
+              <div class="testimonial-dot"></div>
+              <div>
+                <p class="testimonial-name">Georgiana P.</p>
+                <p class="testimonial-stars">★★★★★</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="testimonials-nav">
+      <button class="s-btn-nav t-prev" aria-label="Anterior">
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
+          <path d="M6 1L1 6l5 5M1 6h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button class="s-btn-nav t-next" aria-label="Următor">
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
+          <path d="M10 1l5 5-5 5M15 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- COOKIE -->
+<div id="cookie-banner">
+  <p>Acest site folosește cookie-uri pentru o experiență mai bună. Continuând navigarea, ești de acord cu <a href="cookies.html">Politica de Cookies</a>.</p>
+  <div class="cookie-btns">
+    <button id="accept-cookies">Acceptă tot</button>
+    <button id="reject-cookies">Doar necesare</button>
+  </div>
+</div>
+
+<!-- SCROLL UP -->
+<button class="s-scrollup" id="scrollup" aria-label="Înapoi sus">
+  <svg width="12" height="14" viewBox="0 0 20 20" fill="none">
+    <path d="M0 10L1.7625 11.7625L8.75 4.7875V20H11.25V4.7875L18.225 11.775L20 10L10 0L0 10Z" fill="currentColor"/>
+  </svg>
+</button>
+
+<!-- FOOTER -->
+<footer class="s-footer">
+  <div class="s-footer-inner">
+    <div class="s-footer-grid">
+      <div class="s-footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+40730292776">+40 730 292 776</a>
+        <p style="font-size:13px; margin-top:4px;">Rezervări &amp; Info</p>
+      </div>
+      <div class="s-footer-col">
+        <h4>Locație</h4>
+        <p>Plaja Corbu,<br>Județul Constanța</p>
+        <a href="https://maps.app.goo.gl/LqXJBEXyGk9vnfK48" target="_blank" rel="noopener" style="font-size:12px; text-decoration:underline; margin-top:8px;">Vezi pe hartă</a>
+      </div>
+      <div class="s-footer-col">
+        <h4>Program</h4>
+        <p>Zilnic: 10:30 — 22:30</p>
+      </div>
+      <div class="s-footer-col">
+        <h4>Protecția Consumatorului</h4>
+        <div class="s-anpc">
+          <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="noopener"><div class="s-anpc-badge"><span>ANPC SAL</span><small>Soluționare</small></div></a>
+          <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener"><div class="s-anpc-badge"><span>ANPC SOL</span><small>Online</small></div></a>
+        </div>
+      </div>
+    </div>
+    <div class="s-footer-bottom">
+      <p class="s-footer-copy">© 2026 PESCĂRIA SUTAC. TOATE DREPTURILE REZERVATE.</p>
+      <div class="s-footer-legal"><a href="termene.html">Privacy</a><a href="cookies.html">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/plugins/swiper.min.js"></script>
+<script>
+  const header = document.getElementById('sHeader');
+  const scrollup = document.getElementById('scrollup');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+    scrollup.classList.toggle('visible', window.scrollY > 400);
+  }, {passive: true});
+
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  }));
+
+  new Swiper('.ev-swiper', {
+    slidesPerView: 1.15, spaceBetween: 16, loop: true,
+    navigation: { nextEl: '.ev-next', prevEl: '.ev-prev' },
+    pagination: { el: '.ev-pagination', clickable: true },
+    breakpoints: { 640: { slidesPerView: 2.1 }, 1024: { slidesPerView: 3.1, spaceBetween: 24 } }
+  });
+
+  new Swiper('.t-swiper', {
+    slidesPerView: 1, spaceBetween: 0, loop: true, centeredSlides: true,
+    navigation: { nextEl: '.t-next', prevEl: '.t-prev' },
+    breakpoints: { 900: { slidesPerView: 1.2 } }
+  });
+
+  scrollup.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+
+  (function() {
+    const b = document.getElementById('cookie-banner');
+    if (!localStorage.getItem('cookieConsent')) b.classList.add('show');
+    document.getElementById('accept-cookies').addEventListener('click', () => { localStorage.setItem('cookieConsent','1'); b.classList.remove('show'); });
+    document.getElementById('reject-cookies').addEventListener('click', () => { localStorage.setItem('cookieConsent','0'); b.classList.remove('show'); });
+  })();
+</script>
+</body>
+</html>
