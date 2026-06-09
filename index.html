@@ -1,916 +1,642 @@
-﻿<!DOCTYPE html>
-<html lang="ro">
+<!DOCTYPE html>
+<html class="no-js" lang="ro">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=1280px">
-<title>Pescăria Sutac | Restaurant Pescăresc Autentic Plaja Corbu</title>
+   <title>Pescăria Sutac | Restaurant Pescăresc Autentic Plaja Corbu</title>
+
 <meta name="description" content="Savurează cel mai proaspăt pește pe malul mării la Pescăria Sutac, Plaja Corbu. Borș de pește tradițional, hamsii și ambianță sălbatică. Rezervă o masă acum!">
+
 <meta name="keywords" content="pescaria sutac, restaurant peste corbu, mancare plaja corbu, bors de peste corbu, cherhana corbu, restaurante constanta, peste proaspat marea neagra">
+
 <meta property="og:title" content="Pescăria Sutac | Gustul mării pe Plaja Corbu">
 <meta property="og:description" content="Te așteptăm la Corbu pentru o experiență culinară pescărească autentică. Pește proaspat și rețete tradiționale.">
-<meta property="og:image" content="assets/img/og-image-sutac.jpg">
-<meta property="og:url" content="https://www.pescariasutac.ro">
-<link rel="icon" href="assets/img/logo  sutac 9 (1).png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
-<style>
-:root {
-  --deep: #0a2a3a;
-  --ocean: #0e4d6c;
-  --seafoam: #4bb8c4;
-  --gold: #c9a84c;
-  --cream: #f5f0e8;
-  --bg: #122840;
-  --bg-alt: #0d1117;
-  --muted: #5a7a8a;
-}
-
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { background: var(--bg); font-family: 'Raleway', sans-serif; color: var(--cream); overflow-x: hidden; }
-img { max-width: 100%; height: auto; display: block; }
-a { text-decoration: none; color: inherit; }
-
-/* ── NAV ── */
-.s-header {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  background: rgba(6,24,32,.82);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(201,168,76,.2);
-  transition: background .4s, border-color .4s, box-shadow .4s;
-}
-.s-header.scrolled {
-  background: rgba(6,24,32,.97);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border-bottom: 1px solid rgba(201,168,76,.35);
-  box-shadow: 0 4px 40px rgba(0,0,0,.45);
-}
-.s-nav {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 14px 60px; max-width: 1400px; margin: 0 auto;
-}
-.s-logo img { height: 56px; width: auto; mix-blend-mode: screen; }
-.s-nav-links { display: flex; list-style: none; gap: 44px; align-items: center; }
-.s-nav-links a {
-  color: rgba(245,240,232,.92); font-family: 'Raleway', sans-serif;
-  font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600;
-  transition: color .25s; position: relative;
-}
-.s-nav-links a::after {
-  content: ''; position: absolute; bottom: -4px; left: 0; right: 100%;
-  height: 1px; background: var(--gold); transition: right .3s ease;
-}
-.s-nav-links a:hover { color: var(--cream); }
-.s-nav-links a:hover::after { right: 0; }
-.s-nav-cta {
-  padding: 12px 30px !important;
-  border: 1px solid rgba(201,168,76,.75) !important;
-  color: var(--gold) !important;
-  transition: background .3s, color .3s !important;
-}
-.s-nav-cta::after { display: none !important; }
-.s-nav-cta:hover { background: var(--gold) !important; color: var(--bg) !important; }
-
-.s-hamburger {
-  display: none; flex-direction: column; gap: 6px;
-  background: none; border: none; cursor: pointer; padding: 6px; z-index: 1001;
-}
-.s-hamburger span { display: block; width: 28px; height: 2px; background: var(--cream); transition: all .3s; }
-.s-hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-.s-hamburger.active span:nth-child(2) { opacity: 0; }
-.s-hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-
-.s-mobile-menu {
-  display: none; position: fixed; inset: 0; background: var(--bg);
-  z-index: 999; flex-direction: column; align-items: center; justify-content: center;
-}
-.s-mobile-menu.open { display: flex; }
-.s-mobile-menu ul { list-style: none; text-align: center; }
-.s-mobile-menu li { margin: 18px 0; }
-.s-mobile-menu a {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(26px, 5vw, 40px);
-  color: var(--cream); font-style: italic;
-}
-.s-mobile-menu a:hover { color: var(--gold); }
-
-@media (max-width: 960px) {
-  .s-nav { flex-direction: column; gap: 8px; padding: 10px 16px; align-items: center; }
-  .s-logo img { height: 44px; }
-  .s-nav-links { display: flex; gap: 10px 18px; flex-wrap: wrap; justify-content: center; align-items: center; }
-  .s-nav-links a { font-size: 9px; letter-spacing: 1.5px; }
-  .s-nav-cta { padding: 7px 14px !important; font-size: 9px !important; }
-  .s-hamburger { display: none; }
-  .s-mobile-menu { display: none !important; }
-}
-
-/* ── HERO ── */
-.hero {
-  min-height: 100vh; position: relative;
-  display: flex; align-items: center;
-  overflow: hidden;
-}
-.hero-bg {
-  position: absolute; inset: 0;
-  background-image: url('assets/img/hero_bg_1.jpg');
-  background-size: cover; background-position: center;
-  transform: scale(1.06);
-  animation: heroZoom 10s ease forwards;
-}
-@keyframes heroZoom { to { transform: scale(1); } }
-.hero-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(105deg, rgba(6,24,32,.78) 0%, rgba(6,24,32,.28) 45%, rgba(6,24,32,.02) 100%);
-}
-
-.hero-content {
-  position: relative; z-index: 1;
-  max-width: 1300px; margin: 0 auto; padding: 0 60px;
-  padding-top: 110px; width: 100%;
-}
-
-/* — Eyebrow row — */
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 12px;
-  margin-bottom: 32px;
-  animation: hFadeUp .7s ease .2s both;
-}
-.hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--seafoam); flex-shrink: 0; }
-.hero-badge-line {
-  height: 1px; background: linear-gradient(90deg, var(--seafoam), transparent);
-  animation: hLineGrow .9s ease .5s both;
-}
-@keyframes hLineGrow { from { width: 0; } to { width: 56px; } }
-.hero-eyebrow {
-  font-family: 'Raleway', sans-serif; font-size: 11px;
-  letter-spacing: 4px; text-transform: uppercase; color: var(--seafoam);
-  font-weight: 700;
-}
-
-/* — Main title — */
-.hero-title-line1 {
-  display: block;
-  font-family: 'Raleway', sans-serif;
-  font-size: clamp(13px, 1.6vw, 20px);
-  font-weight: 600; line-height: 1; letter-spacing: 5px;
-  text-transform: uppercase; color: rgba(245,240,232,.65);
-  margin-bottom: 8px;
-  animation: hSlideLeft .9s cubic-bezier(.16,1,.3,1) .4s both;
-}
-.hero-title-line2 {
-  display: block;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(58px, 9.5vw, 120px);
-  font-weight: 400; line-height: 0.95;
-  text-shadow: 0 4px 60px rgba(0,0,0,.5);
-  animation: hSlideRight .9s cubic-bezier(.16,1,.3,1) .6s both;
-}
-.hero-title-accent { color: var(--cream); font-style: italic; }
-.hero-sub {
-  font-family: 'Raleway', sans-serif; font-size: clamp(12px, 1.4vw, 16px);
-  letter-spacing: 5px; text-transform: uppercase; color: var(--gold);
-  font-weight: 300; margin-top: 16px;
-  animation: hFadeUp .7s ease .85s both;
-}
-
-@keyframes hSlideLeft  { from { opacity:0; transform: translateX(-50px); } to { opacity:1; transform: translateX(0); } }
-@keyframes hSlideRight { from { opacity:0; transform: translateX(50px);  } to { opacity:1; transform: translateX(0); } }
-@keyframes hFadeUp     { from { opacity:0; transform: translateY(18px);  } to { opacity:1; transform: translateY(0); } }
-@keyframes fadeUp      { from { opacity:0; transform: translateY(24px);  } to { opacity:1; transform: translateY(0); } }
-
-/* — Gold separator — */
-.hero-sep {
-  display: flex; align-items: center; gap: 16px;
-  margin: 24px 0 30px;
-  animation: hFadeUp .7s ease .9s both;
-}
-.hero-sep-line { height: 1px; width: 70px; background: linear-gradient(90deg, rgba(201,168,76,.55), transparent); }
-.hero-sep-text {
-  font-family: 'Raleway', sans-serif; font-size: 10px; letter-spacing: 3px;
-  text-transform: uppercase; color: rgba(201,168,76,.65); font-weight: 600;
-  white-space: nowrap;
-}
-
-/* — Stats — */
-.hero-stats {
-  display: flex; align-items: center; gap: 0;
-  margin-bottom: 48px;
-  animation: hFadeUp .7s ease 1.05s both;
-}
-.hero-stat { padding: 0 32px; }
-.hero-stat:first-child { padding-left: 0; }
-.hero-stat-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(30px, 3.8vw, 44px);
-  color: var(--gold); font-weight: 400; line-height: 1; display: block;
-}
-.hero-stat-label {
-  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
-  color: rgba(245,240,232,.45); font-weight: 600; display: block; margin-top: 4px;
-}
-.hero-stat-sep { width: 1px; height: 44px; background: rgba(255,255,255,.1); }
-
-/* — CTA buttons — */
-.hero-ctas {
-  display: flex; gap: 14px; flex-wrap: wrap;
-  animation: hFadeUp .7s ease 1.2s both;
-}
-.hero-btn-primary {
-  display: inline-block; padding: 18px 50px;
-  background: var(--gold); color: var(--bg);
-  font-family: 'Raleway', sans-serif;
-  font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 700;
-  border: 1px solid var(--gold); transition: all .35s;
-}
-.hero-btn-primary:hover { background: transparent; color: var(--gold); }
-.hero-btn-secondary {
-  display: inline-block; padding: 18px 42px;
-  border: 1px solid rgba(245,240,232,.22); color: rgba(245,240,232,.7);
-  font-family: 'Raleway', sans-serif;
-  font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600;
-  transition: all .35s;
-}
-.hero-btn-secondary:hover { border-color: rgba(245,240,232,.6); color: var(--cream); }
-
-/* — Vertical accent text — */
-.hero-vert {
-  position: absolute; right: 28px; top: 50%;
-  transform: translateY(-50%) rotate(90deg);
-  font-family: 'Raleway', sans-serif; font-size: 9px; letter-spacing: 5px;
-  text-transform: uppercase; color: rgba(245,240,232,.15); font-weight: 600;
-  white-space: nowrap; pointer-events: none;
-  animation: hFadeUp 1s ease 1.6s both;
-}
-
-/* — Scroll indicator — */
-.hero-scroll {
-  position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
-  z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 8px;
-  animation: hFadeUp 1s ease 1.8s both;
-}
-.hero-scroll-label {
-  font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
-  color: rgba(245,240,232,.28); font-family: 'Raleway', sans-serif; font-weight: 600;
-}
-.hero-scroll-icon {
-  color: rgba(245,240,232,.3);
-  animation: hScrollBounce 2.5s ease infinite;
-}
-@keyframes hScrollBounce {
-  0%,100% { transform: translateY(0); opacity: .3; }
-  50%      { transform: translateY(7px); opacity: .55; }
-}
-
-@media (max-width: 768px) {
-  /* — hero imagine — */
-  .hero-bg {
-    animation: none !important;
-    transform: scale(1) !important;
-    background-attachment: scroll !important;
-    background-position: 80% center !important;
-  }
-  .hero-overlay {
-    background: linear-gradient(to right,
-      rgba(6,24,32,.70) 0%,
-      rgba(6,24,32,.15) 40%,
-      rgba(6,24,32,0)   62%) !important;
-  }
-  /* — hero content — */
-  .hero-content { padding: 0 22px; padding-top: 120px; }
-  .hero-vert { display: none; }
-  /* ascunde elementele non-esențiale pe mobil */
-  .hero-badge { display: none; }
-  .hero-sep   { display: none; }
-  .hero-stats { display: none; }
-  .hero-btn-secondary { display: none; }
-  /* titlu mai compact */
-  .hero-title-line2 { font-size: clamp(44px, 12vw, 64px); }
-  .hero-sub { margin-top: 8px; font-size: 11px; letter-spacing: 3px; }
-  /* un singur buton, compact */
-  .hero-btn-primary { padding: 14px 32px; font-size: 10px; letter-spacing: 2.5px; }
-  .hero-ctas { margin-top: 28px; }
-}
-
-/* ── MARQUEE ── */
-.marquee-wrap {
-  background: var(--bg-alt); overflow: hidden;
-  padding: 20px 0; border-top: 1px solid rgba(201,168,76,.15);
-  border-bottom: 1px solid rgba(201,168,76,.15);
-}
-.marquee-inner {
-  display: flex; width: max-content;
-  animation: marquee 30s linear infinite;
-}
-.marquee-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(16px, 2.5vw, 22px);
-  color: rgba(245,240,232,.5); white-space: nowrap;
-  padding: 0 40px; font-style: italic;
-}
-.marquee-text em { color: var(--gold); font-style: normal; }
-@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
-/* ── ABOUT ── */
-.about-section {
-  position: relative; min-height: 88vh;
-  display: flex; align-items: center;
-  overflow: hidden; background: var(--bg);
-}
-.about-vbg {
-  position: absolute; inset: 0; overflow: hidden;
-}
-.about-vbg video {
-  width: 100%; height: 100%; object-fit: cover; display: block;
-  filter: brightness(.52) saturate(.78) contrast(1.05);
-}
-.about-vbg-overlay {
-  position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(
-    105deg,
-    rgba(6,24,32,.96) 0%,
-    rgba(6,24,32,.84) 35%,
-    rgba(6,24,32,.48) 62%,
-    rgba(6,24,32,.1)  100%
-  );
-}
-.about-content {
-  position: relative; z-index: 1;
-  padding: 120px 60px; max-width: 680px;
-}
-.s-tag {
-  font-family: 'Raleway', sans-serif; font-size: 10px; letter-spacing: 4px;
-  text-transform: uppercase; color: var(--seafoam); font-weight: 700;
-  margin-bottom: 14px; display: block;
-}
-.s-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(30px, 4vw, 52px);
-  color: var(--cream); font-weight: 400; line-height: 1.15;
-}
-.s-title span { color: var(--gold); font-style: italic; }
-.s-divider {
-  width: 50px; height: 1px;
-  background: linear-gradient(90deg, var(--gold), transparent);
-  margin: 18px 0 28px;
-}
-.s-text {
-  font-size: 16px; color: rgba(245,240,232,.88);
-  line-height: 2.05; font-weight: 300;
-}
-.s-link-arrow {
-  display: inline-flex; align-items: center; gap: 10px;
-  color: var(--gold); font-size: 11px; letter-spacing: 3px;
-  text-transform: uppercase; font-weight: 700;
-  margin-top: 32px; transition: gap .3s;
-}
-.s-link-arrow:hover { gap: 16px; }
-@media (max-width: 900px) {
-  .about-section { min-height: 70vh; }
-  .about-content { padding: 80px 24px; }
-  .about-vbg-overlay { background: rgba(6,24,32,.86); }
-}
-
-/* ── PROGRAM ── */
-.program-section { background: var(--bg-alt); }
-.program-grid { display: grid; grid-template-columns: 1fr 1fr; min-height: 480px; }
-.program-img { position: relative; overflow: hidden; }
-.program-img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.75); }
-.program-img::after {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(90deg, transparent 60%, var(--bg-alt));
-}
-.program-text {
-  padding: 80px 80px 80px 60px;
-  display: flex; flex-direction: column; justify-content: center;
-}
-.program-title { font-size: clamp(36px, 4vw, 60px) !important; margin-bottom: 0; }
-.program-hours { margin: 32px 0 40px; }
-.program-row {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 14px 0; border-bottom: 1px solid rgba(245,240,232,.08);
-}
-.program-day {
-  font-family: 'Raleway', sans-serif; font-size: 13px;
-  color: rgba(245,240,232,.5); letter-spacing: 2px; text-transform: uppercase;
-}
-.program-time {
-  font-family: 'Cormorant Garamond', serif; font-size: 20px;
-  color: var(--cream); font-style: italic;
-}
-.s-btn-outline {
-  display: inline-block; padding: 14px 36px;
-  border: 1px solid rgba(201,168,76,.5); color: var(--gold);
-  font-family: 'Raleway', sans-serif; font-size: 10px;
-  letter-spacing: 3px; text-transform: uppercase; font-weight: 700;
-  width: fit-content; transition: all .3s;
-}
-.s-btn-outline:hover { background: var(--gold); color: var(--bg); }
-
-@media (max-width: 900px) {
-  .program-grid { grid-template-columns: 1fr; }
-  .program-img { height: 280px; }
-  .program-img::after { background: linear-gradient(0deg, var(--bg-alt), transparent); }
-  .program-text { padding: 48px 20px 52px; }
-  .program-title { font-size: clamp(32px,8vw,50px) !important; }
-  .program-time { font-size: 18px; }
-  .s-btn-outline { width: 100%; text-align: center; padding: 16px; }
-}
-
-/* ── GALLERY ── */
-.gallery-section { padding: 100px 0; background: var(--bg); }
-.gallery-section .s-tag { text-align: center; }
-.gallery-section .s-title { text-align: center; margin-bottom: 50px; }
-.gallery-item img {
-  width: 100%; height: 380px; object-fit: cover;
-  transition: transform .5s ease, filter .5s ease;
-  filter: brightness(.85) contrast(1.05);
-}
-.gallery-item:hover img { transform: scale(1.03); filter: brightness(1) contrast(1.05); }
-.gallery-item { overflow: hidden; position: relative; }
-
-.gallery-controls {
-  display: flex; align-items: center; justify-content: center;
-  gap: 24px; margin-top: 36px;
-}
-.s-btn-nav {
-  width: 48px; height: 48px;
-  background: rgba(14,77,108,.3);
-  border: 1px solid rgba(75,184,196,.25);
-  color: var(--cream); cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  transition: all .25s; border-radius: 0;
-}
-.s-btn-nav:hover { background: rgba(201,168,76,.15); border-color: var(--gold); color: var(--gold); }
-
-.gallery-pagination .swiper-pagination-bullet {
-  background: rgba(245,240,232,.25); opacity: 1; width: 6px; height: 6px;
-}
-.gallery-pagination .swiper-pagination-bullet-active { background: var(--gold); width: 20px; border-radius: 3px; }
-
-@media (max-width: 768px) {
-  .gallery-section { padding: 70px 0; }
-  .gallery-item img { height: 240px; }
-}
-/* gallery responsive wrapper */
-.gallery-outer { padding: 0 60px; }
-@media (max-width: 960px) { .gallery-outer { padding: 0 20px; } }
-@media (max-width: 480px) { .gallery-outer { padding: 0 12px; } }
-
-/* ── FOOTER ── */
-.s-footer { background: var(--bg-alt); border-top: 1px solid rgba(255,255,255,.05); padding: 70px 0 30px; }
-.s-footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
-.s-footer-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;
-  padding-bottom: 50px; border-bottom: 1px solid rgba(255,255,255,.05); margin-bottom: 30px;
-}
-.s-footer-col h4 {
-  font-family: 'Raleway', sans-serif; font-size: 10px; letter-spacing: 3px;
-  text-transform: uppercase; color: var(--gold); margin-bottom: 18px; font-weight: 700;
-}
-.s-footer-col p, .s-footer-col a {
-  color: rgba(245,240,232,.78); font-size: 15px; line-height: 1.9;
-  display: block; font-weight: 300;
-}
-.s-footer-col a:hover { color: var(--cream); }
-.s-footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-.s-footer-copy { font-size: 11px; color: rgba(245,240,232,.25); letter-spacing: 1px; }
-.s-footer-legal { display: flex; gap: 20px; }
-.s-footer-legal a { font-size: 11px; color: rgba(245,240,232,.25); }
-.s-footer-legal a:hover { color: rgba(245,240,232,.5); }
-.s-anpc { display: flex; gap: 8px; margin-top: 14px; }
-.s-anpc-badge {
-  border: 1px solid rgba(255,255,255,.15); padding: 6px 8px;
-  text-align: center; border-radius: 2px; transition: border-color .3s;
-}
-.s-anpc-badge:hover { border-color: rgba(255,255,255,.35); }
-.s-anpc-badge span { display: block; font-size: 8px; color: rgba(255,255,255,.65); font-weight: 700; letter-spacing: .5px; }
-.s-anpc-badge small { font-size: 6px; color: rgba(255,255,255,.3); text-transform: uppercase; letter-spacing: .5px; }
-
-@media (max-width: 768px) {
-  .s-footer-grid { grid-template-columns: 1fr 1fr; }
-  .s-footer-inner { padding: 0 24px; }
-  .s-footer-bottom { flex-direction: column; align-items: flex-start; }
-}
-@media (max-width: 480px) { .s-footer-grid { grid-template-columns: 1fr; } }
-
-/* ── SCROLL UP ── */
-.s-scrollup {
-  position: fixed; bottom: 28px; right: 28px; width: 44px; height: 44px;
-  background: rgba(6,24,32,.85); border: 1px solid rgba(201,168,76,.4);
-  color: var(--gold); cursor: pointer; display: flex; align-items: center; justify-content: center;
-  opacity: 0; pointer-events: none; transition: all .3s; z-index: 800;
-}
-.s-scrollup.visible { opacity: 1; pointer-events: auto; }
-.s-scrollup:hover { background: var(--gold); color: var(--bg); }
-
-/* ── COOKIE ── */
-#cookie-banner {
-  display: none; position: fixed; bottom: 0; left: 0; right: 0;
-  background: rgba(6,24,32,.97); border-top: 1px solid rgba(201,168,76,.25);
-  padding: 18px 40px; z-index: 9999; align-items: center; gap: 20px;
-  flex-wrap: wrap; backdrop-filter: blur(10px);
-}
-#cookie-banner.show { display: flex; }
-#cookie-banner p { flex: 1; font-size: 12px; color: rgba(245,240,232,.6); line-height: 1.6; margin: 0; min-width: 200px; }
-#cookie-banner a { color: var(--gold); text-decoration: underline; }
-.cookie-btns { display: flex; gap: 10px; flex-shrink: 0; }
-#accept-cookies { background: var(--gold); color: var(--bg); border: none; padding: 10px 22px; cursor: pointer; font-weight: 700; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-family: 'Raleway', sans-serif; }
-#reject-cookies { background: transparent; color: rgba(245,240,232,.4); border: 1px solid rgba(245,240,232,.15); padding: 10px 22px; cursor: pointer; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-family: 'Raleway', sans-serif; }
-
-@media (max-width: 600px) { #cookie-banner { padding: 16px 20px; } }
-
-/* ── MOBILE GLOBAL ── */
-@media (max-width: 768px) {
-  .hero-title { font-size: clamp(36px,10vw,56px); }
-  .hero-btn { display: block; text-align: center; padding: 18px 24px; margin-top: 36px; }
-  .hero-scroll { display: none; }
-  /* bigger touch targets */
-  .s-hamburger { padding: 12px; }
-  .s-hamburger span { width: 28px; }
-  .s-btn-nav { width: 52px; height: 52px; }
-  /* marquee readable */
-  .marquee-text { font-size: 17px; padding: 0 24px; }
-  /* footer */
-  .s-footer { padding: 56px 0 24px; }
-  .s-footer-copy { font-size: 12px; }
-  /* cookie */
-  .cookie-btns { width: 100%; }
-  #accept-cookies, #reject-cookies { flex: 1; padding: 13px 10px; }
-}
-@media (max-width: 480px) {
-  .hero-title { font-size: clamp(32px,11vw,46px); }
-  .hero-eyebrow { font-size: 9px; letter-spacing: 4px; }
-  .s-nav { padding: 14px 16px; }
-  .s-logo img { height: 44px; }
-  .s-divider { margin: 14px 0 22px; }
-}
-
-/* ── OCEAN AMBIANCE ── */
-body {
-  background:
-    radial-gradient(ellipse at 20% 20%, rgba(20,100,145,1) 0%, transparent 70%),
-    radial-gradient(ellipse at 80% 80%, rgba(35,148,165,1) 0%, transparent 70%),
-    var(--bg);
-  background-attachment: fixed;
-}
-@media (max-width: 768px) { body { background-attachment: scroll; } }
-.gallery-section {
-  background-image:
-    radial-gradient(ellipse at 20% 30%, rgba(20,100,145,1) 0%, transparent 70%),
-    radial-gradient(ellipse at 82% 72%, rgba(35,148,165,.95) 0%, transparent 65%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath fill='%234bb8c4' opacity='.22' d='M10 25 Q30 5 60 25 Q30 45 10 25Z M60 25 L80 10 L75 25 L80 40Z'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath fill='%234bb8c4' opacity='.22' d='M90 25 Q70 5 40 25 Q70 45 90 25Z M40 25 L20 10 L25 25 L20 40Z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: 0 0, 0 0, 4% 30%, 90% 68%;
-  background-size: 100% 100%, 100% 100%, 200px, 240px;
-}
-.program-section, .s-footer {
-  background-image:
-    radial-gradient(ellipse at 78% 25%, rgba(20,100,145,1) 0%, transparent 70%),
-    radial-gradient(ellipse at 18% 78%, rgba(35,148,165,.92) 0%, transparent 65%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath fill='%234bb8c4' opacity='.18' d='M90 25 Q70 5 40 25 Q70 45 90 25Z M40 25 L20 10 L25 25 L20 40Z'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Cpath fill='%234bb8c4' opacity='.18' d='M10 25 Q30 5 60 25 Q30 45 10 25Z M60 25 L80 10 L75 25 L80 40Z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: 0 0, 0 0, 88% 35%, 7% 72%;
-  background-size: 100% 100%, 100% 100%, 220px, 170px;
-}
-
-/* ══════════════════════════════════════════
-   MOBILE — TOT SITE-UL (≤ 768px)
-   ══════════════════════════════════════════ */
-@media (max-width: 768px) {
-
-  /* ── Hero ── */
-  .hero { min-height: 82vh; }
-
-  /* ── About (secțiunea cu video) ── */
-  .about-section { min-height: unset; }
-  .about-vbg-overlay {
-    background: linear-gradient(to bottom,
-      rgba(6,24,32,.93) 0%,
-      rgba(6,24,32,.85) 100%) !important;
-  }
-  .about-content { padding: 48px 22px 56px !important; max-width: 100%; }
-
-  /* ── Program ── */
-  .program-text { padding: 40px 22px 48px !important; }
-  .program-hours { margin: 24px 0 28px; }
-  .program-row { padding: 12px 0; }
-  .program-time { font-size: 17px; }
-
-  /* ── Galerie ── */
-  .gallery-section { padding: 50px 0 !important; }
-  .gallery-section .s-title { margin-bottom: 28px !important; }
-
-  /* ── Titluri & texte ── */
-  .s-title  { font-size: clamp(26px, 7.5vw, 38px) !important; line-height: 1.2; }
-  .s-text   { font-size: 14px !important; line-height: 1.8 !important; }
-  .s-tag    { font-size: 9px !important; letter-spacing: 3px; }
-  .s-divider { margin: 12px 0 18px; }
-  .s-link-arrow { font-size: 10px; letter-spacing: 2.5px; margin-top: 22px; }
-
-  /* ── Footer compact ── */
-  .s-footer { padding: 40px 0 20px !important; }
-  .s-footer-col p, .s-footer-col a { font-size: 13px; }
-
-  /* ── Scroll indicator ── */
-  .hero-scroll { display: none; }
-
-  /* ── Marquee ── */
-  .marquee-wrap { padding: 14px 0; }
-}
-</style>
+<meta property="og:image" content="assets/img/og-image-sutac.jpg"> <meta property="og:url" content="https://www.pescariasutac.ro">
+    <!-- Favicon Icon -->
+    <link rel="icon" href="assets/img/logo  sutac 9 (1).png" />
+    <!-- Site Title -->
+    <title>Pescăria Sutac</title>
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
+    <div id="minicircle"></div>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="ak-preloader" class="ak-preloader">
+            <div class="animation-preloader">
+                <div class="spinner"></div>
+                <div class="txt-loading">
+                    <span data-text-preloader="S" class="letters-loading">
+                        S
+                    </span>
 
-<!-- HEADER -->
-<header class="s-header" id="sHeader">
-  <nav class="s-nav">
-    <a href="index.html" class="s-logo">
-      <img src="assets/img/logo orig.jpeg" alt="Pescăria Sutac">
-    </a>
-    <ul class="s-nav-links">
-      <li><a href="index.html">Acasă</a></li>
-      <li><a href="povestea.html">Povestea</a></li>
-      <li><a href="about.html">Evenimente</a></li>
-      <li><a href="meniu.html">Meniu</a></li>
-      <li><a href="https://www.facebook.com/profile.php?id=100090660430181" target="_blank" rel="noopener">Facebook</a></li>
-      <li><a href="rezervari.html" class="s-nav-cta">Rezervă</a></li>
-    </ul>
-    <button class="s-hamburger" id="hamburger" aria-label="Deschide meniu">
-      <span></span><span></span><span></span>
+                    <span data-text-preloader="U" class="letters-loading">
+                       U
+                    </span>
+
+                    <span data-text-preloader="T" class="letters-loading">
+                        T
+                    </span>
+
+                    <span data-text-preloader="A" class="letters-loading">
+                        A
+                    </span>
+
+                    <span data-text-preloader="C" class="letters-loading">
+                        C
+                    </span>
+
+                  
+                </div>
+            </div>
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+        </div>
+    </div>
+    <!-- Start Header Section -->
+    <header class="ak-site_header ak-style1 ak-sticky_header ak-site_header_full_width">
+        <div class="header-top">
+            <div class="wrapper">
+                <div class="header-logo">
+                    <a href="rezervari.html" class="logo">Rezervă</a>
+                </div>
+                <div class="center-log">
+                    <a href="index.html"><img src="assets/img/logo sutac 3.png" alt="..."></a>
+                </div>
+                <button class="ak-menu-toggle" id="akMenuToggle" type="button">
+                    <svg viewBox="0 0 20 15" width="40px" height="30px" class="ak-menu-icon">
+                        <path d="M20,2 L2,2" class="bar-1"></path>
+                        <path d="M2,7 L20,7" class="bar-2"></path>
+                        <path d="M30,12 L2,12" class="bar-3"></path>
+                    </svg>
+                </button>
+          <ul class="top-main-menu" style="text-shadow: 1px 1px 6px rgba(0,0,0,0.7);">
+                    <li class="top-main-menu-li">
+                        <a href="index.html">Acasă</a>
+                    </li>
+                    <li class="top-main-menu-li">
+                        <a href="povestea.html">Despre noi</a>
+                    </li>
+                    <li class="top-main-menu-li">
+                        <a href="about.html">Evenimente</a>
+                    </li>
+                    <li class="top-main-menu-li">
+                        <a href="meniu.html">Meniu</a>
+                    </li>
+                    <li class="top-main-menu-li">
+                        <a href="rezervari.html">Rezervări</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="nav-bar-border"></div>
+        <div class="ak-main_header">
+            <div class="container">
+                <div class="ak-main_header_in">
+                    <div class="ak-main_header_left">
+                        <a class="ak-site_branding" href="index.html">
+                            <img src="assets/img/logo sutac 3.png" alt="...">
+                        </a>
+                    </div>
+                    <div class="ak-main_header_right">
+                        <div class="ak-nav ak-medium">
+                      <ul class="ak-nav_list" style="text-shadow: 1px 1px 6px rgba(0,0,0,0.7);">
+                                <li class="menu-item-has-children">
+                                    <a href="index.html">Acasă</a>
+                                    
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="povestea.html">Povestea noastră</a>
+                                    
+                                </li>
+                                <li class="top-main-menu-li">
+                        <a href="about.html">Evenimente</a>
+                    </li>
+                                <li>
+                                    <a href="meniu.html">Meniu</a>
+                                </li>
+                                
+                                
+                                <li class="menu-item-has-children">
+                                    <a href="rezervari.html">Rezervări</a>
+                                    
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="https://www.facebook.com/profile.php?id=100090660430181">Facebook</a>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- End Header Section -->
+    <div id="scrollsmoother-container">
+        <main>
+            <!-- Start Hero -->
+            <section>
+
+                <div class="ak-hero ak-style1">
+                    <div class="ak-hero-bg ak-bg" data-src="assets/img/hero_bg_1.jpg"></div>
+                    <div class="hero-text-section container-fluid">
+                        <div class="ak-slider ak-slider-1">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="slider-info">
+                                        <div class="hero-title">
+                                            <br>
+                                            <br>
+                                            <br>
+                                           <h1 class="hero-main-title" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">Restaurant <br>Pescăria Sutac </h1>
+                                            <h1 class="hero-main-title-1"> </h1>
+<h3 class="hero-main-title-1"></h3>  
+<h3 class="hero-main-title-1">& Brigadă Piscicolă</h3>                                        </div>
+
+                                        <div class="ak-height-20 ak-height-lg-20"></div>
+                                        <p class="hero-sub-text" style="text-align: justify; text-justify: inter-word;">
+
+</p>
+                                        <a href="rezervari.html" class="hero-btn style-1">
+                                            <div class="ak-btn style-5 color-yellow-bg">
+                                                Rezervă
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slider-info">
+
+                                      <div class="hero-title">
+<h1 class="hero-main-title" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">Restaurant <br>Pescăria Sutac</h1>
+    <h3 class="hero-main-title-1"><br>Brigadă Piscicolă</h3>
+</div>
+
+<div class="ak-height-20 ak-height-lg-20"></div>
+
+<p class="hero-sub-text">
+</p>
+
+
+<a href="rezervari.html" class="hero-btn style-1">
+    <div class="ak-btn style-5 color-yellow-bg">Rezervă</div>
+</a>
+                                        </a>
+                                    </div>
+                                </div>
+                              
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="ak-swiper-controll">
+                            <div class="ak-swiper-navigation-wrap">
+                                <div class="ak-swiper-button-prev">
+                                    <div class="hero-swiper-prev">
+                                        <div class="btn-cricle"></div>
+                                        <div class="btn-arrow">
+                                            <svg width="40" height="55" viewBox="0 0 54 52" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_1166_8458)">
+                                                    <path
+                                                        d="M16.6309 25.4001L25.1406 16.8902C25.4463 16.5333 25.9835 16.4917 26.3405 16.7974C26.6974 17.1031 26.739 17.6403 26.4333 17.9973C26.4048 18.0306 26.3738 18.0617 26.3405 18.0901L19.2859 25.1532H52.9762C53.4461 25.1532 53.8271 25.5343 53.8271 26.0043C53.8271 26.4743 53.4461 26.8552 52.9762 26.8552H19.2859L26.3405 33.9098C26.6974 34.2155 26.739 34.7527 26.4333 35.1097C26.1275 35.4666 25.5904 35.5082 25.2334 35.2025C25.2001 35.174 25.1691 35.1429 25.1406 35.1097L16.6308 26.5999C16.3009 26.2681 16.3009 25.732 16.6309 25.4001Z"
+                                                        fill="#FFF" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ak-swiper-button-next">
+                                    <div class="hero-swiper-next">
+                                        <div class="btn-cricle"></div>
+                                        <div class="btn-arrow">
+                                            <svg width="40" height="55" viewBox="0 0 55 52" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_1166_8452)">
+                                                    <path
+                                                        d="M38.0234 25.4001L29.5137 16.8902C29.208 16.5333 28.6708 16.4917 28.3138 16.7974C27.9569 17.1031 27.9153 17.6403 28.221 17.9973C28.2495 18.0306 28.2805 18.0617 28.3138 18.0901L35.3684 25.1532H1.6781C1.20816 25.1532 0.827148 25.5343 0.827148 26.0043C0.827148 26.4743 1.20816 26.8552 1.6781 26.8552H35.3684L28.3138 33.9098C27.9569 34.2155 27.9153 34.7527 28.221 35.1097C28.5268 35.4666 29.0639 35.5082 29.4209 35.2025C29.4542 35.174 29.4852 35.1429 29.5137 35.1097L38.0235 26.5999C38.3534 26.2681 38.3534 25.732 38.0234 25.4001Z"
+                                                        fill="#FFF" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!-- End Hero -->
+
+            <!-- Start Sliding Text -->
+            <div class="ak-moving-section-wrap ak-normal text-uppercase">
+                <div class="ak-moving-section-in">
+                    <div class="ak-moving-section">
+                        <h2><span>De trei </span> generații <span>la malul</span> mării. 
+                                </h2>
+                    </div>
+                    <div class="ak-moving-section">
+                        <h2><span>De trei </span> generații <span>la malul</span> mării.
+                                </h2>
+                    </div>
+                </div>
+            </div>
+            <!-- End Sliding Text -->
+
+            <!-- Start About -->
+              <section style="background-color: #ffffff;">
+                <div class="container">
+                    <div class="ak-best-item">
+                        <div class="best-item-section-1">
+                            <div class="ak-section-heading ak-style-1">
+                                <div class="ak-section-subtitle">
+                               
+                                </div>
+                                <h2 class="ak-section-title anim-title-2">
+                               <br>
+                               <span style="color: #00adef;">Despre noi</span>
+                               </h2>
+                            </div>
+                            <div class="ak-height-30 ak-height-lg-30"></div>
+                            <div>
+                                <p>Situată chiar pe buza plajei Corbu, Pescăria Sutac nu este doar un restaurant, ci o poveste de familie scrisă cu sare și dor de ducă. Suntem una dintre ultimele oaze de sălbăticie de la malul mării, unde onestitatea bucătăriei pescărești se împletește cu libertatea orizontului.
+                                    <br>Afacerea noastră este ancorată în trei generații de pescari. De la bunic la nepot, am învățat că marea nu se stăpânește, ci se respectă. Această legătură de sânge cu valurile este garanția că tot ce ajunge în farfuria ta poartă amprenta autenticității.
+                                </p>
+                            </div>
+                            <div class="ak-height-50 ak-height-lg-30"></div>
+                            
+                            
+                        </div>
+                        <div class="best-item-section-2" data-speed="1.1" data-lag="1">
+                            <img src="assets/img/star_line.svg" alt="...">
+                        </div>
+                        <div class="best-item-section-3">
+                            <div class="img-two">
+                                <img src="assets/img/pescar.png" alt="..." data-speed="1.1" data-lag="0">
+                                <div class="img-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+           
+            <!-- End About -->
+
+            <!-- Start Opening Hour -->
+            <section class="ak-bg-secendary">
+
+                <div class="opening-hour">
+                    <div class="opening-hour-img-section">
+                        <img src="assets/img/img sutac1.jpg" class="opening-bg-img ak-bg" alt="..."
+                            data-speed="auto">
+                        <div class="overlap-opening-img"></div>
+                    </div>
+                    <div class="opening-hour-text-section">
+                        <h2 class="opening-hour-title anim-title-2">Program </h2>
+                        <div class="ak-height-30 ak-height-lg-30"></div>
+                        <p class="opening-hour-subtext" style="color: white;">
+   Vă invităm să ne treceți pragul în intervalele menționate mai jos pentru a descoperi aromele deosebite ale meniului nostru, într-o atmosferă distinsă.
+</p>
+                        <div class="ak-height-30 ak-height-lg-30"></div>
+                        <div class="opening-hour-date">
+                            <p>Zilnic: 10:30- 22:30</p>
+                            <div class="opening-hour-hr"></div>
+                            
+                        </div>
+                        <div class="ak-height-70 ak-height-lg-30"></div>
+                        <div class="text-btn">
+                            <a href="rezervari.html" class="text-btn1">
+                                Rezervă 
+                            </a>
+                        </div>
+
+                        <div class="ak-height-lg-60"></div>
+
+                    </div>
+                </div>
+
+            </section>
+            <!-- End  Opening Hou  -->
+
+
+            <br>
+            <br>
+            <!-- Start Food item show case -->
+            <section>
+                <div class="container-fluid">
+                    <div class="ak-section-heading ak-style-1 ak-type-1">
+                        <div class="ak-section-subtitle">Preparate</div>
+                        <h2 class="ak-section-title anim-title">Galerie Foto</h2>
+                    </div>
+                    <div class="ak-height-65 ak-height-lg-30"></div>
+                    <div class="ak-slider ak-slider-2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="ak-card ak-style-1">
+                                    <a href="" class="ak-card-img">
+                                        <img src="assets/img/portfolio_1.jpg" alt="..." />
+                                    </a>
+                                    <div class="card-info">
+                                        <div class="card-text style-1">
+                                            <a href="portfolio-details.html">
+                                                
+                                            </a>
+                                            <div class="card-subtitle">
+                                           
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ak-card ak-style-1">
+                                    <a href="portfolio-details.html" class="ak-card-img">
+                                        <img src="assets/img/portfolio_2.jpg" alt="..." />
+
+                                    </a>
+                                    <div class="card-info">
+                                        <div class="card-text style-1">
+                                            <a href="portfolio-details.html">
+                                                
+                                            </a>
+                                            <div class="card-subtitle">
+                                         
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ak-card ak-style-1">
+                                    <a href="portfolio-details.html" class="ak-card-img">
+                                        <img src="assets/img/portfolio_3.jpg" alt="..." />
+                                    </a>
+                                    <div class="card-info">
+                                        <div class="card-text style-1">
+                                            <a href="portfolio-details.html">
+                                                
+                                            </a>
+                                            <div class="card-subtitle">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ak-card ak-style-1">
+                                    <a href="portfolio-details.html" class="ak-card-img">
+                                        <img src="assets/img/portfolio_4.jpg" alt="..." />
+                                    </a>
+                                    <div class="card-info">
+                                        <div class="card-text style-1">
+                                            <a href="portfolio-details.html">
+                                                
+                                            </a>
+                                            <div class="card-subtitle">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ak-card ak-style-1">
+                                    <a href="portfolio-details.html" class="ak-card-img">
+                                        <img src="assets/img/portfolio_5.jpg" alt="..." />
+                                    </a>
+                                    <div class="card-info">
+                                        <div class="card-text style-1">
+                                           
+                                           
+                                              
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="container">
+  <div class="ak-next-prev-2">
+    <div class="ak-next-prev-2 ak-style-1">
+      
+<div class="ak-swiper-button-prev-2">
+    <button class="button-prev-next-2" aria-label="Previous slide" style="display: flex; align-items: center; justify-content: center;">
+        <svg width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="currentColor" stroke-width="2" fill-rule="evenodd">
+                <path d="M7.257 1.343L1.6 7l5.657 5.657M1.6 7h18"></path>
+            </g>
+        </svg>
     </button>
-  </nav>
-</header>
-
-<!-- MOBILE MENU -->
-<div class="s-mobile-menu" id="mobileMenu" role="navigation">
-  <ul>
-    <li><a href="index.html">Acasă</a></li>
-    <li><a href="povestea.html">Povestea</a></li>
-    <li><a href="about.html">Evenimente</a></li>
-    <li><a href="meniu.html">Meniu</a></li>
-    <li><a href="https://www.facebook.com/profile.php?id=100090660430181" target="_blank" rel="noopener">Facebook</a></li>
-    <li><a href="rezervari.html">Rezervă</a></li>
-  </ul>
 </div>
 
-<main>
-
-<!-- HERO -->
-<section class="hero" id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content">
-
-    <div class="hero-badge">
-      <div class="hero-badge-dot"></div>
-      <div class="hero-badge-line"></div>
-      <span class="hero-eyebrow">Plaja Sălbatică Corbu &nbsp;·&nbsp; Est. 1998</span>
-    </div>
-
-    <h1>
-      <span class="hero-title-line1">Restaurant</span>
-      <span class="hero-title-line2"><span class="hero-title-accent">Pescăria Sutac</span></span>
-    </h1>
-    <p class="hero-sub">& Brigadă Piscicolă</p>
-
-    <div class="hero-sep">
-      <div class="hero-sep-line"></div>
-      <span class="hero-sep-text">Pescăria Sutac &nbsp;·&nbsp; Restaurant Pescăresc Autentic</span>
-      <div class="hero-sep-line"></div>
-    </div>
-
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <span class="hero-stat-num">1998</span>
-        <span class="hero-stat-label">Fondați</span>
+      <div class="ak-pagination-2 ak-style1">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
       </div>
-      <div class="hero-stat-sep"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">3</span>
-        <span class="hero-stat-label">Generații</span>
+
+      <div class="ak-swiper-button-next-2">
+        <button class="button-prev-next-2" aria-label="Next slide">
+          <svg width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd">
+              <path d="M12.743 1.343L18.4 7l-5.657 5.657M18.4 7H.4"></path>
+            </g>
+          </svg>
+        </button>
       </div>
-      <div class="hero-stat-sep"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-num">100%</span>
-        <span class="hero-stat-label">Pește proaspăt</span>
-      </div>
+
     </div>
-
-    <div class="hero-ctas">
-      <a href="rezervari.html" class="hero-btn-primary">Rezervă o masă</a>
-      <a href="meniu.html" class="hero-btn-secondary">Descoperă meniul</a>
-    </div>
-
-  </div>
-
-
-  <div class="hero-scroll" aria-hidden="true">
-    <span class="hero-scroll-label">Scroll</span>
-    <div class="hero-scroll-icon">
-      <svg width="20" height="28" viewBox="0 0 20 28" fill="none">
-        <rect x="1" y="1" width="18" height="26" rx="9" stroke="currentColor" stroke-width="1.5"/>
-        <circle cx="10" cy="8" r="2" fill="currentColor">
-          <animate attributeName="cy" values="8;16;8" dur="2s" repeatCount="indefinite"/>
-        </circle>
-      </svg>
-    </div>
-  </div>
-</section>
-
-<!-- MARQUEE -->
-<div class="marquee-wrap" aria-hidden="true">
-  <div class="marquee-inner">
-    <span class="marquee-text"><em>De trei</em> generații <em>la malul</em> mării &mdash;&ensp;</span>
-    <span class="marquee-text"><em>De trei</em> generații <em>la malul</em> mării &mdash;&ensp;</span>
-    <span class="marquee-text"><em>De trei</em> generații <em>la malul</em> mării &mdash;&ensp;</span>
-    <span class="marquee-text"><em>De trei</em> generații <em>la malul</em> mării &mdash;&ensp;</span>
-    <span class="marquee-text"><em>De trei</em> generații <em>la malul</em> mării &mdash;&ensp;</span>
-    <span class="marquee-text"><em>De trei</em> generații <em>la malul</em> mării &mdash;&ensp;</span>
   </div>
 </div>
+            <!-- End Food item show case -->
 
-<!-- ABOUT -->
-<section class="about-section" id="despre">
-  <div class="about-vbg">
-    <video src="assets/video/pescar2.mp4" autoplay loop muted playsinline></video>
-    <div class="about-vbg-overlay"></div>
-  </div>
-  <div class="about-content">
-    <span class="s-tag">Cine suntem</span>
-    <h2 class="s-title">Despre <span>noi</span></h2>
-    <div class="s-divider"></div>
-    <p class="s-text">Situată chiar pe buza plajei Corbu, Pescăria Sutac nu este doar un restaurant, ci o poveste de familie scrisă cu sare și dor de ducă. Suntem una dintre ultimele oaze de sălbăticie de la malul mării, unde onestitatea bucătăriei pescărești se împletește cu libertatea orizontului.</p>
-    <p class="s-text" style="margin-top:16px;">Afacerea noastră este ancorată în trei generații de pescari. De la bunic la nepot, am învățat că marea nu se stăpânește, ci se respectă. Această legătură de sânge cu valurile este garanția că tot ce ajunge în farfuria ta poartă amprenta autenticității.</p>
-    <a href="povestea.html" class="s-link-arrow">
-      Citește povestea
-      <svg width="20" height="8" viewBox="0 0 20 8" fill="none">
-        <path d="M12 1l6 3.5L12 7M0 4.5h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </a>
-  </div>
-</section>
 
-<!-- PROGRAM -->
-<section class="program-section">
-  <div class="program-grid">
-    <div class="program-img">
-      <img src="assets/img/img sutac1.jpg" alt="Restaurant Pescăria Sutac pe Plaja Corbu" loading="lazy">
-    </div>
-    <div class="program-text">
-      <span class="s-tag">Când ne găsești</span>
-      <h2 class="s-title program-title">Program</h2>
-      <div class="s-divider"></div>
-      <p class="s-text">Vă invităm să ne treceți pragul în intervalele menționate mai jos pentru a descoperi aromele deosebite ale meniului nostru, într-o atmosferă distinsă.</p>
-      <div class="program-hours">
-        <div class="program-row">
-          <span class="program-day">Zilnic</span>
-          <span class="program-time">10:30 — 22:30</span>
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+        
+
+
+<!--begin cookie banner-->
+<div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: #222; color: #fff; padding: 20px; text-align: center; z-index: 1000; font-family: sans-serif;">
+    <p style="margin: 0 0 10px 0; font-size: 14px;">
+        Acest site folosește cookie-uri pentru a vă oferi o experiență mai bună. 
+        Continuând navigarea, sunteți de acord cu <a href="cookies.html" style="color: #ffcc00; text-decoration: underline;">Politica de Cookies</a>.
+    </p>
+    <button id="accept-cookies" style="background: #28a745; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; font-weight: bold; margin-right: 10px;">Acceptă Tot</button>
+    <button id="reject-cookies" style="background: #6c757d; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px;">Doar necesare</button>
+</div>
+
+<!--end cookie banner-->
+
+
+
+
+
+
+            
+
+
+<!---Begin Booking System -->
+
+
+
+
+            <br>
+            <br>
+
+<footer style="background-color: #0d1117; color: #ffffff; padding: 60px 0 30px 0; font-family: 'Segoe UI', Roboto, sans-serif; border-top: 1px solid rgba(255,255,255,0.05);">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    
+    <div class="row" style="display: flex; flex-wrap: wrap; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 40px;">
+      
+      <div style="flex: 1; min-width: 200px; margin-bottom: 30px;">
+        <h4 style="font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: #00adef; margin-bottom: 20px;">Contact</h4>
+        <p style="margin: 5px 0;"><a href="tel:+40730292776" style="color: #fff; text-decoration: none; font-size: 16px; font-weight: 500;">+40 730 292 776</a></p>
+        <p style="margin: 5px 0; font-size: 14px; opacity: 0.7;">Rezervări & Info</p>
+      </div>
+
+      <div style="flex: 1; min-width: 200px; margin-bottom: 30px;">
+        <h4 style="font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: #00adef; margin-bottom: 20px;">Locație</h4>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6;">
+          Plaja Corbu,<br>
+          Județul Constanța
+        </p>
+        <a href="https://maps.app.goo.gl/LqXJBEXyGk9vnfK48" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 12px; opacity: 0.6;">Vezi pe hartă</a>
+      </div>
+
+      <div style="flex: 1; min-width: 200px; margin-bottom: 30px;">
+        <h4 style="font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: #00adef; margin-bottom: 20px;">Program</h4>
+        <div style="font-size: 14px; line-height: 1.8;">
+          <div style="display: flex; justify-content: space-between; max-width: 180px;"><span>Zilnic: 10:30- 22:30</span> <span></span></div>
+          <div style="display: flex; justify-content: space-between; max-width: 180px; opacity: 0.6; font-size: 12px;"><span></span> <span></span></div>
         </div>
       </div>
-      <a href="rezervari.html" class="s-btn-outline">Rezervă acum</a>
-    </div>
-  </div>
-</section>
 
-<!-- GALLERY -->
-<section class="gallery-section">
-  <div class="gallery-outer">
-    <span class="s-tag" style="text-align:center;">Preparate</span>
-    <h2 class="s-title" style="text-align:center; margin-bottom:50px;">Galerie Foto</h2>
-  </div>
-  <div class="gallery-outer">
-    <div class="swiper gallery-swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><div class="gallery-item"><img src="assets/img/portfolio_1.jpg" alt="Preparat Pescăria Sutac" loading="lazy"></div></div>
-        <div class="swiper-slide"><div class="gallery-item"><img src="assets/img/portfolio_2.jpg" alt="Preparat Pescăria Sutac" loading="lazy"></div></div>
-        <div class="swiper-slide"><div class="gallery-item"><img src="assets/img/portfolio_3.jpg" alt="Preparat Pescăria Sutac" loading="lazy"></div></div>
-        <div class="swiper-slide"><div class="gallery-item"><img src="assets/img/portfolio_4.jpg" alt="Preparat Pescăria Sutac" loading="lazy"></div></div>
-        <div class="swiper-slide"><div class="gallery-item"><img src="assets/img/portfolio_5.jpg" alt="Preparat Pescăria Sutac" loading="lazy"></div></div>
-      </div>
-    </div>
-    <div class="gallery-controls">
-      <button class="s-btn-nav gallery-prev" aria-label="Anterior">
-        <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-          <path d="M6 1L1 6l5 5M1 6h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <div class="gallery-pagination"></div>
-      <button class="s-btn-nav gallery-next" aria-label="Următor">
-        <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-          <path d="M10 1l5 5-5 5M15 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- COOKIE -->
-<div id="cookie-banner">
-  <p>Acest site folosește cookie-uri pentru o experiență mai bună. Continuând navigarea, ești de acord cu <a href="cookies.html">Politica de Cookies</a>.</p>
-  <div class="cookie-btns">
-    <button id="accept-cookies">Acceptă tot</button>
-    <button id="reject-cookies">Doar necesare</button>
-  </div>
-</div>
-
-<!-- SCROLL UP -->
-<button class="s-scrollup" id="scrollup" aria-label="Înapoi sus">
-  <svg width="12" height="14" viewBox="0 0 20 20" fill="none">
-    <path d="M0 10L1.7625 11.7625L8.75 4.7875V20H11.25V4.7875L18.225 11.775L20 10L10 0L0 10Z" fill="currentColor"/>
-  </svg>
-</button>
-
-<!-- FOOTER -->
-<footer class="s-footer">
-  <div class="s-footer-inner">
-    <div class="s-footer-grid">
-      <div class="s-footer-col">
-        <h4>Contact</h4>
-        <a href="tel:+40730292776">+40 730 292 776</a>
-        <p style="font-size:13px; margin-top:4px;">Rezervări &amp; Info</p>
-      </div>
-      <div class="s-footer-col">
-        <h4>Locație</h4>
-        <p>Plaja Corbu,<br>Județul Constanța</p>
-        <a href="https://maps.app.goo.gl/LqXJBEXyGk9vnfK48" target="_blank" rel="noopener" style="font-size:12px; text-decoration:underline; margin-top:8px;">Vezi pe hartă</a>
-      </div>
-      <div class="s-footer-col">
-        <h4>Program</h4>
-        <p>Zilnic: 10:30 — 22:30</p>
-      </div>
-      <div class="s-footer-col">
-        <h4>Protecția Consumatorului</h4>
-        <div class="s-anpc">
-          <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="noopener">
-            <div class="s-anpc-badge"><span>ANPC SAL</span><small>Soluționare</small></div>
+      <div style="flex: 1; min-width: 200px; margin-bottom: 30px;">
+        <h4 style="font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: #00adef; margin-bottom: 20px;">Protecția Consumatorului</h4>
+        <div style="display: flex; gap: 10px;">
+          <a href="https://anpc.ro/ce-este-sal/" target="_blank" style="text-decoration: none;">
+            <div style="border: 1px solid rgba(255,255,255,0.2); padding: 5px; border-radius: 2px; text-align: center; width: 90px; transition: 0.3s;">
+              <span style="display: block; font-size: 9px; color: #fff; font-weight: bold;">ANPC SAL</span>
+              <span style="font-size: 7px; color: #fff; opacity: 0.5;">SOLUȚIONARE</span>
+            </div>
           </a>
-          <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">
-            <div class="s-anpc-badge"><span>ANPC SOL</span><small>Online</small></div>
+          <a href="https://ec.europa.eu/consumers/odr/" target="_blank" style="text-decoration: none;">
+            <div style="border: 1px solid rgba(255,255,255,0.2); padding: 5px; border-radius: 2px; text-align: center; width: 90px;">
+              <span style="display: block; font-size: 9px; color: #fff; font-weight: bold;">ANPC SOL</span>
+              <span style="font-size: 7px; color: #fff; opacity: 0.5;">ONLINE</span>
+            </div>
           </a>
         </div>
       </div>
+
     </div>
-    <div class="s-footer-bottom">
-      <p class="s-footer-copy">© 2026 PESCĂRIA SUTAC. TOATE DREPTURILE REZERVATE.</p>
-      <div class="s-footer-legal">
-        <a href="termene.html">Privacy</a>
-        <a href="cookies.html">Cookies</a>
+
+    <div style="margin-top: 30px; display: flex; justify-content: space-between; align-items: center;">
+      <div style="font-size: 11px; opacity: 0.4; letter-spacing: 1px;">
+        © 2026 PESCĂRIA SUTAC. TOATE DREPTURILE REZERVATE.
+      </div>
+      <div style="font-size: 11px; opacity: 0.4;">
+        <a href="termene.html" style="color: #fff; text-decoration: none;">PRIVACY</a> 
+        <span style="margin: 0 10px;">|</span> 
+        <a href="cookies.html" style="color: #fff; text-decoration: none;">COOKIES</a>
       </div>
     </div>
+
   </div>
 </footer>
 
-<script src="assets/js/plugins/swiper.min.js"></script>
-<script>
-  const header = document.getElementById('sHeader');
-  const scrollup = document.getElementById('scrollup');
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 60);
-    scrollup.classList.toggle('visible', window.scrollY > 400);
-  }, {passive: true});
 
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    mobileMenu.classList.toggle('open');
-    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
-  });
-  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    mobileMenu.classList.remove('open');
-    document.body.style.overflow = '';
-  }));
 
-  new Swiper('.gallery-swiper', {
-    slidesPerView: 1.15,
-    spaceBetween: 16,
-    loop: true,
-    navigation: { nextEl: '.gallery-next', prevEl: '.gallery-prev' },
-    pagination: { el: '.gallery-pagination', clickable: true, type: 'bullets' },
-    breakpoints: {
-      640: { slidesPerView: 2.1, spaceBetween: 20 },
-      1024: { slidesPerView: 3.1, spaceBetween: 24 }
+
+
+
+    <!-- End Footer -->
+
+    </section>
+    <span class="ak-scrollup">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 10L1.7625 11.7625L8.75 4.7875V20H11.25V4.7875L18.225 11.775L20 10L10 0L0 10Z"
+                fill="currentColor" />
+        </svg>
+    </span>
+   
+
+
+
+
+
+    <!-- Script -->
+
+
+  <script>
+document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // 1. Validare Anti-Bot (3 + 4 = 7)
+    const raspuns = document.getElementById('bot_answer').value;
+    if(raspuns !== "7") {
+        alert("Răspuns incorect la verificarea anti-robot!");
+        return;
     }
-  });
 
-  scrollup.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+    // 2. Colectare date
+    const nume = document.getElementById('nume_client').value;
+    const telClient = document.getElementById('telefon_client').value;
+    const nrPers = document.getElementById('persoane').options[document.getElementById('persoane').selectedIndex].text;
+    const ora = document.getElementById('time').value;
+    const data = document.getElementById('date').value;
 
-  (function() {
-    const b = document.getElementById('cookie-banner');
-    if (!localStorage.getItem('cookieConsent')) b.classList.add('show');
-    document.getElementById('accept-cookies').addEventListener('click', () => { localStorage.setItem('cookieConsent','1'); b.classList.remove('show'); });
-    document.getElementById('reject-cookies').addEventListener('click', () => { localStorage.setItem('cookieConsent','0'); b.classList.remove('show'); });
-  })();
+    // 3. Destinația (Numărul tău)
+    const telDest = "40730292776";
+
+    // 4. Construire mesaj
+    const textMesaj = `Salut! Rezervare nouă:%0A%0A` +
+                      `👤 *Nume:* ${nume}%0A` +
+                      `📞 *Tel:* ${telClient}%0A` +
+                      `👥 *Pers:* ${nrPers}%0A` +
+                      `📅 *Data:* ${data}%0A` +
+                      `🕒 *Ora:* ${ora}`;
+
+    // 5. Trimitere
+    window.open(`https://wa.me/${telDest}?text=${textMesaj}`, '_blank').focus();
+});
 </script>
+    <script src="assets/js/plugins/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/plugins/isotope.pkg.min.js"></script>
+    <script src="assets/js/plugins/swiper.min.js"></script>
+    <script src="assets/js/plugins/lightgallery.min.js"></script>
+    <script src="assets/js/plugins/ScrollSmoother.min.js"></script>
+    <script src="assets/js/plugins/SplitText.min.js"></script>
+    <script src="assets/js/plugins/ScrollTrigger.min.js"></script>
+    <script src="assets/js/plugins/ScrollToPlugin.min.js"></script>
+    <script src="assets/js/plugins/gsap.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
