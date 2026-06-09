@@ -38,19 +38,19 @@
 /*--------------------------------------------------------------
 1. Basic Color Variable
 ----------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Prompt:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700&display=swap");
 :root {
-  --body-font-family: "Prompt", sans-serif;
-  --heading-font-family: "Baskervville", sans-serif;
-  --yellow-color: #00adef;
- --body-color: #C8C8C8;
-  --body-bg-color: #ffffff;
-  --body-bg-color-two: #240909;
-  --heading-color: #00adef;
-  --border-color: #4F4836;
+  --body-font-family: "Raleway", sans-serif;
+  --heading-font-family: "Cormorant Garamond", serif;
+  --yellow-color: #c9a84c;
+  --body-color: #f5f0e8;
+  --body-bg-color: #122840;
+  --body-bg-color-two: #0d1117;
+  --heading-color: #c9a84c;
+  --border-color: #1e3a4a;
   --common-color-white: #FFF;
   --common-color-black: #000000;
-  
+
 }
 
 /*--------------------------------------------------------------
@@ -81,7 +81,7 @@ h6 {
   font-weight: 400;
   line-height: normal;
   font-style: normal;
-  font-family: "Baskervville", sans-serif;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .cs_primary_font {
@@ -281,7 +281,7 @@ textarea {
      -moz-user-select: none;
           user-select: none;
   font-size: 55px;
-  font-family: "Baskervville", sans-serif;
+  font-family: "Cormorant Garamond", serif;
 }
 .ak-preloader .animation-preloader .txt-loading .letters-loading:before {
   animation: letters-loading 3s infinite;
@@ -1294,7 +1294,7 @@ select:focus {
 .ak-stroke-text {
   font-size: 100px;
   font-weight: 400;
-  font-family: Baskervville;
+  font-family: "Cormorant Garamond";
   color: transparent;
   -webkit-text-stroke: 1px var(--yellow-color);
 }
@@ -1369,7 +1369,7 @@ select:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #00adef;
+  border: 1px solid #c9a84c;
 }
 
 .ak-player-btn:before,
@@ -1425,7 +1425,7 @@ select:focus {
   overflow: hidden;
 }
 .ak-section-heading.ak-style-1 .ak-section-subtitle {
-  font-family: Baskervville;
+  font-family: "Cormorant Garamond";
   color: var(--heading-color);
   font-size: 18px;
   font-style: italic;
@@ -1465,7 +1465,7 @@ select:focus {
   background-color: var(--heading-color);
 }
 .ak-section-heading.ak-sytle-2 .mini-title.style-1 .mini-text {
-  font-family: Prompt;
+  font-family: "Raleway";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1485,7 +1485,7 @@ select:focus {
   color: #fff;
 }
 .ak-section-heading.ak-sytle-2 .section-desp {
-  font-family: Prompt;
+  font-family: "Raleway";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1684,7 +1684,7 @@ select:focus {
   right: 0;
   height: 1px;
   width: 0;
-  background: #00adef;
+  background: #c9a84c;
   transition: all 0.4s ease;
 }
 
@@ -2104,7 +2104,7 @@ input[type=checkbox] {
 .check-data .check-title {
   display: block;
   width: 59%;
-  font-family: Prompt;
+  font-family: "Raleway";
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -2716,13 +2716,13 @@ input[type=checkbox] {
   height: 55px;
   width: 56px;
   border-radius: 50% 50% 50% 50%;
-  border-right: 1px solid #00adef;
+  border-right: 1px solid #c9a84c;
   transition: all 0.3s ease-in-out;
   transform: rotate(180deg);
 }
 .ak-swiper-controll-4 .ak-swiper-navigation-wrap-4 .ak-swiper-button-prev-4:hover > .btn-cricle {
   border-radius: 100%;
-  border: 1px solid #00adef;
+  border: 1px solid #c9a84c;
 }
 .ak-swiper-controll-4 .ak-swiper-navigation-wrap-4 .ak-swiper-button-prev-4:hover > .btn-arrow {
   transform: translateX(0px);
@@ -2768,7 +2768,7 @@ input[type=checkbox] {
 .ak-slider-6 .swiper-slide .slider-text-info .slider-mini-title {
   color: var(--heading-color);
   font-style: italic;
-  font-family: Baskervville;
+  font-family: "Cormorant Garamond";
   font-size: 18px;
   opacity: 0;
   position: relative;
@@ -2895,7 +2895,7 @@ input[type=checkbox] {
 .ak-slider-8 .swiper-slide .slider-text-info .short-title {
   color: var(--heading-color);
   font-style: italic;
-  font-family: Baskervville;
+  font-family: "Cormorant Garamond";
 }
 .ak-slider-8 .swiper-slide .slider-8-img {
   position: absolute;
@@ -3316,7 +3316,7 @@ input[type=checkbox] {
   padding-right: 28px;
 }
 .ak-site_header.ak-style1 .header-top .wrapper .header-logo .logo:hover {
-  color: #00adef;
+  color: #c9a84c;
 }
 .ak-site_header.ak-style1 .header-top .wrapper .center-log {
   margin-right: 88px;
@@ -3352,7 +3352,7 @@ input[type=checkbox] {
   text-transform: uppercase;
   font-style: italic;
   color: #fff;
-  font-family: Baskervville;
+  font-family: "Cormorant Garamond";
   padding-left: 15%;
   padding-right: 5%;
   transition: all 0.5s ease-in-out;
@@ -4123,7 +4123,7 @@ input[type=checkbox] {
 .ak-hero.ak-style1 .hero-text-section .swiper-slide-active .slider-info .hero-title .mini-title {
   font-style: italic;
   text-transform: capitalize;
-  font-family: Baskervville;
+  font-family: "Cormorant Garamond";
   font-size: 18px;
   font-weight: 400;
   color: var(--heading-color);
@@ -4448,7 +4448,7 @@ h3.hero-main-title-1 {
   color: #fff;
 }
 .ak-about.ak-style-1 .about-section.ak-about-1 .about-text-section .about-title span {
-  color: #00adef;
+  color: #c9a84c;
 }
 
 .ak-about.ak-style-2 {
@@ -4854,7 +4854,7 @@ h3.hero-main-title-1 {
   color: var(--yellow-color);
 }
 .food-menu.style-1 .food-menu-section-1 .food-menu-price p {
-  color: #00adef;
+  color: #c9a84c;
   font-size: 18px;
 }
 .food-menu.style-1 .food-menu-section-2 {
@@ -4992,7 +4992,7 @@ h3.hero-main-title-1 {
 }
 .chef .chef-title a {
   font-size: 20px;
-  color: #00adef;
+  color: #c9a84c;
   text-transform: uppercase;
 }
 .chef:hover .chef-style-1 {
@@ -5103,7 +5103,7 @@ h3.hero-main-title-1 {
   transition: all 0.6s cubic-bezier(0.7, -0.56, 0.27, 1.6);
 }
 .testimonial-section .testimonial-info-section .short-title {
-  color: #00adef;
+  color: #c9a84c;
   position: relative;
   top: 10px;
   opacity: 0;
@@ -5114,7 +5114,7 @@ h3.hero-main-title-1 {
   font-size: 22px;
   line-height: normal;
   font-style: italic;
-  color: #00adef;
+  color: #c9a84c;
   font-weight: 400;
 }
 
@@ -5240,7 +5240,7 @@ h3.hero-main-title-1 {
   z-index: 3;
 }
 .booking-system-form .ak-form-time-date input[type=time]::-webkit-calendar-picker-indicator {
-  background-color: #00adef;
+  background-color: #c9a84c;
   cursor: pointer;
   opacity: 0;
 }
@@ -5268,7 +5268,7 @@ h3.hero-main-title-1 {
   z-index: 3;
 }
 .booking-system-form .ak-form-time-date input[type=date]::-webkit-calendar-picker-indicator {
-  background-color: #00adef;
+  background-color: #c9a84c;
   cursor: pointer;
   opacity: 0;
 }
@@ -5358,7 +5358,7 @@ h3.hero-main-title-1 {
 }
 
 .blog-two .read-more {
-  color: #00adef;
+  color: #c9a84c;
 }
 .blog-two .read-more span {
   margin-left: 10px;
@@ -5394,7 +5394,7 @@ h3.hero-main-title-1 {
   width: 80%;
   text-align: start;
   font-style: italic;
-  font-family: Baskervville;
+  font-family: "Cormorant Garamond";
 }
 .quote-option .testimonial-section .testimonial-info-subtitle {
   margin-top: 0;
@@ -5486,7 +5486,7 @@ h3.hero-main-title-1 {
   margin-right: 15px;
 }
 .author-info .author-icon:hover > svg > path {
-  fill: #00adef;
+  fill: #c9a84c;
 }
 
 @media screen and (max-width: 767px) {
@@ -5524,10 +5524,10 @@ h3.hero-main-title-1 {
   color: #fff;
 }
 .comment-list .comment .url:hover {
-  color: #00adef;
+  color: #c9a84c;
 }
 .comment-list .comment .reply {
-  color: #00adef;
+  color: #c9a84c;
 }
 .comment-list .comment .reply > :hover {
   color: #fff;
@@ -5588,7 +5588,7 @@ h3.hero-main-title-1 {
 }
 .location-card .location-card-item:hover .card-icon {
   border: none;
-  background-color: #00adef;
+  background-color: #c9a84c;
 }
 .location-card .location-card-item:hover .card-icon svg path {
   fill: #000;
@@ -5663,7 +5663,7 @@ h3.hero-main-title-1 {
 .portfolio-section .portfolio-info h6 span {
   color: #fff;
   text-transform: capitalize;
-  font-family: Prompt;
+  font-family: "Raleway";
 }
 .portfolio-section .portfolio-slider {
   overflow: hidden;
@@ -5687,7 +5687,7 @@ h3.hero-main-title-1 {
   margin-top: 3px;
 }
 .portfolio-details .portfolio-details-icon a:hover > svg > path {
-  fill: #00adef;
+  fill: #c9a84c;
 }
 
 @media screen and (max-width: 1740px) {
@@ -6025,20 +6025,20 @@ h3.hero-main-title-1 {
   color: #fff;
   transition: all 0.3s;
   display: inline-block;
-  font-family: Baskervville;
+  font-family: "Cormorant Garamond";
   font-size: 26px;
 }
 .room-card .room-card-body .room-card-title.size-2 {
   margin: 0;
   margin-bottom: 25px;
   font-size: 22px;
-  color: #00adef;
+  color: #c9a84c;
 }
 .room-card .room-card-body .room-card-title.size-2:hover {
   color: #fff;
 }
 .room-card .room-card-body .room-card-title:hover {
-  color: #00adef;
+  color: #c9a84c;
 }
 .room-card .room-card-body .room-card-info {
   display: flex;
@@ -6053,7 +6053,7 @@ h3.hero-main-title-1 {
   height: 16.646px;
   flex-shrink: 0;
   opacity: 0.3;
-  background-color: #00adef;
+  background-color: #c9a84c;
 }
 .room-card .room-card-body .room-card-info .room-card-date {
   margin: 20px 0 8px 0;
@@ -6062,7 +6062,7 @@ h3.hero-main-title-1 {
   margin-bottom: 30px;
 }
 .room-card .room-footer .room-card-bottom-text {
-  color: #00adef;
+  color: #c9a84c;
   transition: all 0.3s;
   display: inline-block;
   text-transform: uppercase;
@@ -6098,7 +6098,7 @@ h3.hero-main-title-1 {
   color: #fff;
 }
 .room-card .room-footer .room-card-bottom-text.color-1:hover {
-  color: #00adef;
+  color: #c9a84c;
 }
 
 @media screen and (max-width: 991px) {
@@ -6185,13 +6185,13 @@ h3.hero-main-title-1 {
   transition: all 0.3s ease;
 }
 .core-services .services-list .feature-list:hover {
-  color: #00adef;
+  color: #c9a84c;
 }
 .core-services .services-list .feature-list:nth-child(n) {
   border-bottom: 1px solid #4F4836;
 }
 .core-services .services-list .swiper-pagination-bullet-active {
-  color: #00adef;
+  color: #c9a84c;
 }
 
 @media screen and (max-width: 1550px) {
@@ -6206,14 +6206,14 @@ h3.hero-main-title-1 {
 
 .ak-funfact.ak-style1 .ak-funfact-number {
   display: flex;
-  color: #00adef;
+  color: #c9a84c;
 }
 .ak-funfact.ak-style1 .ak-funfact-number span {
   font-size: 80px;
 }
 .ak-funfact.ak-style1 .ak-funfact-text {
   color: #fff;
-  font-family: Baskervville;
+  font-family: "Cormorant Garamond";
   font-style: italic;
   font-weight: 400;
   line-height: 140%;
@@ -6224,7 +6224,7 @@ h3.hero-main-title-1 {
 }
 .ak-funfact.ak-style1 .ak-funfact-text span {
   font-size: 20px;
-  color: #00adef;
+  color: #c9a84c;
 }
 
 @media screen and (max-width: 991px) {
@@ -6253,7 +6253,7 @@ h3.hero-main-title-1 {
   background-color: #091e24;
   gap: 20px;
   padding: 50px;
-  font-family: Prompt;
+  font-family: "Raleway";
   align-items: center;
 }
 .feature-card.padding-22-26 {
@@ -6296,12 +6296,12 @@ h3.hero-main-title-1 {
 }
 .feature-card .feature-date p {
   font-size: 20px;
-  color: #00adef;
+  color: #c9a84c;
 }
 .feature-card .feature-date .month-name {
-  font-family: Baskervville;
+  font-family: "Cormorant Garamond";
   font-size: 20px;
-  color: #00adef;
+  color: #c9a84c;
   margin-top: 5px;
 }
 .feature-card .feature-text {
@@ -6313,7 +6313,7 @@ h3.hero-main-title-1 {
   font-family: var(--heading-font-family);
 }
 .feature-card .feature-text .title-link .title:hover {
-  color: #00adef;
+  color: #c9a84c;
 }
 .feature-card .feature-text.cs_color_2 {
   color: var(--body-color);
@@ -6326,7 +6326,7 @@ h3.hero-main-title-1 {
   margin-bottom: 10px;
 }
 .feature-card .feature-text h4 span {
-  color: #00adef;
+  color: #c9a84c;
   font-size: 20px;
 }
 
@@ -6408,7 +6408,7 @@ h3.hero-main-title-1 {
   color: #fff;
 }
 .our-story .our-story-left .our-story-title span {
-  color: #00adef;
+  color: #c9a84c;
 }
 .our-story .our-story-right {
   display: flex;
@@ -6435,14 +6435,14 @@ h3.hero-main-title-1 {
   }
 }
 .total-review {
-  font-family: Prompt;
+  font-family: "Raleway";
   display: flex;
   align-items: center;
   background-color: var(--body-bg-color-two);
   padding: 4vw 3vw;
 }
 .total-review h2 {
-  font-family: Prompt;
+  font-family: "Raleway";
 }
 @media screen and (max-width: 767px) {
   .total-review h2 {
@@ -6522,7 +6522,7 @@ h3.hero-main-title-1 {
 }
 .booking-widget .booking-widget-inner .total .price {
   color: #fff;
-  font-family: Prompt;
+  font-family: "Raleway";
   font-size: 32px;
 }
 
@@ -6548,16 +6548,16 @@ h3.hero-main-title-1 {
   align-items: center;
 }
 .event-list .date-text .date-section .date {
-  font-family: Prompt;
+  font-family: "Raleway";
   font-size: 36px;
   line-height: 100%;
 }
 .event-list .date-text .date-section .month-name {
-  font-family: Baskervville;
+  font-family: "Cormorant Garamond";
 }
 .event-list .date-text .date-section p {
   font-size: 20px;
-  color: #00adef;
+  color: #c9a84c;
 }
 .event-list .date-text .text-section .section-title {
   color: #fff;
@@ -6567,7 +6567,7 @@ h3.hero-main-title-1 {
   display: inline-block;
   text-transform: uppercase;
   margin-top: 30px;
-  color: #00adef;
+  color: #c9a84c;
 }
 .event-list .date-text .text-section .event-details span {
   margin-left: 10px;
@@ -6639,11 +6639,11 @@ h3.hero-main-title-1 {
 }
 .ak-accordeon .ak-accordion-item .ak-accordion-header .ak-accordion-title {
   font-size: 20px;
-  font-family: Baskervville;
+  font-family: "Cormorant Garamond";
 }
 .ak-accordeon .ak-accordion-item .ak-accordion-header span {
-  color: #00adef;
-  font-family: Baskervville;
+  color: #c9a84c;
+  font-family: "Cormorant Garamond";
 }
 .ak-accordeon .ak-accordion-item .ak-accordion-header svg {
   transition: transform 0.5s;
@@ -6760,7 +6760,7 @@ h3.hero-main-title-1 {
 
 /* Opțional: Schimbă culoarea când dai click/focus */
 .ak-form-select:focus {
-    border-color: #00adef;
+    border-color: #c9a84c;
 
     
 }
@@ -6776,7 +6776,7 @@ h3.hero-main-title-1 {
     align-items: center !important;
     justify-content: center !important;
     background-color: rgba(0, 173, 239, 0.3) !important; /* Un albastru transparent ca să le vezi */
-    border: 1px solid #00adef !important;
+    border: 1px solid #c9a84c !important;
 }
 
 .ak-next-prev-2 .button-prev-next-2 svg {
