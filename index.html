@@ -279,7 +279,7 @@ a { text-decoration: none; color: inherit; }
   .hero-sep   { display: none; }
   .hero-stats { display: none; }
   .hero-btn-secondary { display: none; }
-  .hero-title-line2 { font-size: clamp(44px, 12vw, 64px); }
+  .hero-title-line2 { font-size: clamp(30px, 9vw, 34px); } /* Scris principal redus la jumătate pentru încadrare perfectă */
   .hero-sub { margin-top: 8px; font-size: 11px; letter-spacing: 3px; }
   .hero-btn-primary { padding: 14px 32px; font-size: 10px; letter-spacing: 2.5px; }
   .hero-ctas { margin-top: 28px; }
@@ -509,7 +509,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ── MOBILE GLOBAL ── */
 @media (max-width: 768px) {
-  .hero-title { font-size: clamp(36px,10vw,56px); }
+  .hero-title { font-size: clamp(24px, 8vw, 30px); }
   .hero-btn { display: block; text-align: center; padding: 18px 24px; margin-top: 36px; }
   .hero-scroll { display: none; }
   .s-hamburger { padding: 12px; }
@@ -522,7 +522,6 @@ a { text-decoration: none; color: inherit; }
   #accept-cookies, #reject-cookies { flex: 1; padding: 13px 10px; }
 }
 @media (max-width: 480px) {
-  .hero-title { font-size: clamp(32px,11vw,46px); }
   .hero-eyebrow { font-size: 9px; letter-spacing: 4px; }
   .s-nav { padding: 14px 16px; }
   .s-logo img { height: 32px; }
@@ -564,12 +563,20 @@ body {
    ══════════════════════════════════════════ */
 @media (max-width: 768px) {
 
-  /* ── Hero (Poza/Fundalul reduse la jumătate) ── */
+  /* ── Hero (Optimizat la maximum) ── */
   .hero { 
-    min-height: 40vh; /* Înălțime redusă la jumătate față de varianta inițială */
+    min-height: 32vh; /* Înălțime redusă suplimentar pentru format tip banner */
   }
   .hero-content { 
-    padding-top: 70px; /* Aliniere optimizată pentru noul spațiu */
+    padding-top: 55px; 
+  }
+  .hero-title-line1 {
+    font-size: 11px !important;
+    letter-spacing: 3px;
+  }
+  .hero-title-line2 {
+    font-size: 34px !important; /* Scris mult mai compact, încadrare fluidă */
+    line-height: 1;
   }
 
   /* ── About (Se mută video sus și textul dedesubt) ── */
