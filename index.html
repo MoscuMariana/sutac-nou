@@ -99,11 +99,13 @@ a { text-decoration: none; color: inherit; }
 .s-mobile-menu a:hover { color: var(--gold); }
 
 @media (max-width: 960px) {
-  .s-nav { flex-direction: row; justify-content: space-between; padding: 12px 20px; align-items: center; }
-  .s-logo img { height: 32px; }
-  .s-nav-links { display: none; }
-  .s-hamburger { display: flex; }
-  .s-mobile-menu.open { display: flex; }
+  .s-nav { flex-direction: column; gap: 8px; padding: 10px 16px; align-items: center; }
+  .s-logo img { height: 44px; }
+  .s-nav-links { display: flex; gap: 10px 18px; flex-wrap: wrap; justify-content: center; align-items: center; }
+  .s-nav-links a { font-size: 9px; letter-spacing: 1.5px; }
+  .s-nav-cta { padding: 7px 14px !important; font-size: 9px !important; }
+  .s-hamburger { display: none; }
+  .s-mobile-menu { display: none !important; }
 }
 
 /* ── HERO ── */
@@ -562,32 +564,42 @@ body {
    ══════════════════════════════════════════ */
 @media (max-width: 768px) {
 
-  /* ── Hero (Strâns și apropiat la maximum) ── */
-  .hero { 
-    min-height: 32vh; 
+  /* ── Hero ── */
+  .hero {
+    min-height: 52vh;
   }
-  .hero-content { 
-    padding-top: 45px; 
+  .hero-content {
+    padding-top: 105px;
   }
   .hero-title-line1 {
-    font-size: 10px !important;
-    letter-spacing: 1px !important;
-    margin-bottom: 0px !important;
-    line-height: 0.9 !important;
+    font-size: 11px !important;
+    letter-spacing: 2.5px !important;
+    margin-bottom: 4px !important;
+    line-height: 1 !important;
+    color: rgba(245,240,232,.75) !important;
   }
   .hero-title-line2 {
-    font-size: 22px !important; /* Scris considerabil mai mic */
-    letter-spacing: 0.5px !important; /* Litere mai adunate */
-    line-height: 0.9 !important; /* Rânduri foarte apropiate */
+    font-size: clamp(34px, 10vw, 46px) !important;
+    letter-spacing: 1px !important;
+    line-height: 1.05 !important;
     margin-top: 0px !important;
+    text-shadow: 0 2px 24px rgba(0,0,0,.7) !important;
   }
   .hero-sub {
-    font-size: 9px !important;
-    letter-spacing: 1px !important;
-    margin-top: 2px !important;
+    font-size: 12px !important;
+    letter-spacing: 2.5px !important;
+    margin-top: 8px !important;
+    color: var(--gold) !important;
+    opacity: 1 !important;
   }
   .hero-ctas {
-    margin-top: 12px !important; /* Apropierea butoanelor de text */
+    margin-top: 20px !important;
+  }
+  .hero-btn-primary {
+    padding: 16px 38px !important;
+    font-size: 11px !important;
+    letter-spacing: 2.5px !important;
+    box-shadow: 0 4px 20px rgba(201,168,76,.35) !important;
   }
 
   /* ── About (Se mută video sus și textul dedesubt) ── */
