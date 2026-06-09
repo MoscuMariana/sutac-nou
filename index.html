@@ -100,7 +100,7 @@ a { text-decoration: none; color: inherit; }
 
 @media (max-width: 960px) {
   .s-nav { flex-direction: row; justify-content: space-between; padding: 12px 20px; align-items: center; }
-  .s-logo img { height: 32px; } /* Logo mai mic pe tablete / ecrane medii */
+  .s-logo img { height: 32px; }
   .s-nav-links { display: none; }
   .s-hamburger { display: flex; }
   .s-mobile-menu.open { display: flex; }
@@ -525,7 +525,7 @@ a { text-decoration: none; color: inherit; }
   .hero-title { font-size: clamp(32px,11vw,46px); }
   .hero-eyebrow { font-size: 9px; letter-spacing: 4px; }
   .s-nav { padding: 14px 16px; }
-  .s-logo img { height: 32px; } /* Forțează logo-ul foarte mic pe ecrane înguste */
+  .s-logo img { height: 32px; }
   .s-divider { margin: 14px 0 22px; }
 }
 
@@ -564,8 +564,13 @@ body {
    ══════════════════════════════════════════ */
 @media (max-width: 768px) {
 
-  /* ── Hero ── */
-  .hero { min-height: 82vh; }
+  /* ── Hero (Poza/Fundalul reduse la jumătate) ── */
+  .hero { 
+    min-height: 40vh; /* Înălțime redusă la jumătate față de varianta inițială */
+  }
+  .hero-content { 
+    padding-top: 70px; /* Aliniere optimizată pentru noul spațiu */
+  }
 
   /* ── About (Se mută video sus și textul dedesubt) ── */
   .about-section { 
@@ -576,7 +581,7 @@ body {
   .about-vbg {
     position: relative;
     width: 100%;
-    height: 190px; /* Redus considerabil pentru a nu ocupa mult ecran */
+    height: 190px;
     inset: auto;
   }
   .about-vbg video {
@@ -588,7 +593,7 @@ body {
   }
   .about-content { 
     position: relative;
-    padding: 30px 22px 50px !important; /* Spațieri compacte */
+    padding: 30px 22px 50px !important;
     max-width: 100%; 
     background: var(--bg);
   }
