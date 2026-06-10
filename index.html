@@ -101,7 +101,7 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 960px) {
   .s-nav { flex-direction: row; align-items: center; justify-content: space-between; gap: 0; padding: 10px 16px; }
   .s-logo { order: 2; flex-shrink: 0; }
-  .s-logo img { height: 22px; }
+  .s-logo img { height: 52px; }
   .s-nav-links { order: 1; flex: 1; display: flex; gap: 7px 13px; flex-wrap: wrap; justify-content: flex-start; align-items: center; }
   .s-nav-links a { font-size: 9px; letter-spacing: 1.5px; }
   .s-nav-cta { padding: 7px 14px !important; font-size: 9px !important; }
@@ -477,11 +477,15 @@ a { text-decoration: none; color: inherit; }
 .s-anpc-badge small { font-size: 6px; color: rgba(255,255,255,.3); text-transform: uppercase; letter-spacing: .5px; }
 
 @media (max-width: 768px) {
-  .s-footer-grid { grid-template-columns: 1fr 1fr; }
-  .s-footer-inner { padding: 0 24px; }
+  .s-footer-grid { grid-template-columns: 1fr 1fr; gap: 20px; padding-bottom: 24px; margin-bottom: 20px; }
+  .s-footer-inner { padding: 0 20px; }
   .s-footer-bottom { flex-direction: column; align-items: flex-start; }
 }
-@media (max-width: 480px) { .s-footer-grid { grid-template-columns: 1fr; } }
+@media (max-width: 480px) {
+  .s-footer-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .s-footer-col h4 { margin-bottom: 10px; }
+  .s-footer-col p, .s-footer-col a { font-size: 13px; line-height: 1.7; }
+}
 
 /* ── SCROLL UP ── */
 .s-scrollup {
@@ -593,17 +597,17 @@ body {
   /* ── Hero ── */
   .hero {
     min-height: 65vh;
-    align-items: flex-end;
+    align-items: flex-start;
   }
   .hero-bg {
     background-image: url('assets/img/hero_mobil.jpg') !important;
     background-position: center center !important;
   }
   .hero-overlay {
-    background: linear-gradient(to top, rgba(6,24,32,.88) 0%, rgba(6,24,32,.35) 50%, rgba(6,24,32,.05) 100%) !important;
+    background: linear-gradient(to bottom, rgba(6,24,32,.72) 0%, rgba(6,24,32,.45) 40%, rgba(6,24,32,.1) 75%, rgba(6,24,32,.0) 100%) !important;
   }
   .hero-content {
-    padding: 0 22px 36px !important;
+    padding: 100px 22px 36px !important;
   }
   .hero-title-line1 {
     font-family: 'Cormorant Garamond', serif !important;
