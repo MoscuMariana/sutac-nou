@@ -168,8 +168,8 @@ a { text-decoration: none; color: inherit; }
 .s-anpc-badge:hover { border-color: rgba(255,255,255,.35); }
 .s-anpc-badge span { display: block; font-size: 8px; color: rgba(255,255,255,.65); font-weight: 700; letter-spacing: .5px; }
 .s-anpc-badge small { font-size: 6px; color: rgba(255,255,255,.3); text-transform: uppercase; }
-@media (max-width: 768px) { .s-footer-grid { grid-template-columns: 1fr 1fr; } .s-footer-inner { padding: 0 24px; } .s-footer-bottom { flex-direction: column; align-items: flex-start; } }
-@media (max-width: 480px) { .s-footer-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { .s-footer-grid { grid-template-columns: 1fr 1fr; gap: 20px; padding-bottom: 24px; margin-bottom: 20px; } .s-footer-inner { padding: 0 20px; } .s-footer-bottom { flex-direction: column; align-items: flex-start; } }
+@media (max-width: 480px) { .s-footer-grid { grid-template-columns: 1fr 1fr; gap: 16px; } .s-footer-col h4 { margin-bottom: 10px; } .s-footer-col p, .s-footer-col a { font-size: 13px; line-height: 1.7; } }
 
 /* ── MOBILE GLOBAL ── */
 @media (max-width: 768px) {
@@ -179,6 +179,7 @@ a { text-decoration: none; color: inherit; }
   .video-section { padding: 56px 0; }
   .video-wrap { margin: 0 20px; }
   .story-section { padding: 56px 0; }
+  .story-section:first-of-type { padding-top: 100px; }
   .story-img img { height: 260px; }
   .story-img-frame { inset: 10px; }
   .story-num { font-size: 56px; margin-bottom: -12px; }

@@ -32,7 +32,7 @@ a { text-decoration: none; color: inherit; }
 .s-header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(6,24,32,.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(201,168,76,.2); transition: background .4s, border-color .4s, box-shadow .4s; }
 .s-header.scrolled { background: rgba(6,24,32,.97); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid rgba(201,168,76,.35); box-shadow: 0 4px 40px rgba(0,0,0,.45); }
 .s-nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 60px; max-width: 1400px; margin: 0 auto; }
-.s-logo img { height: 56px; width: auto; mix-blend-mode: screen; }
+.s-logo img { height: 72px; width: auto; filter: invert(1); mix-blend-mode: screen; }
 .s-nav-links { display: flex; list-style: none; gap: 44px; align-items: center; }
 .s-nav-links a { color: rgba(245,240,232,.92); font-family: 'Raleway', sans-serif; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; transition: color .25s; position: relative; }
 .s-nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 100%; height: 1px; background: var(--gold); transition: right .3s; }
@@ -191,15 +191,15 @@ a { text-decoration: none; color: inherit; }
 .s-anpc-badge:hover { border-color: rgba(255,255,255,.35); }
 .s-anpc-badge span { display: block; font-size: 8px; color: rgba(255,255,255,.65); font-weight: 700; letter-spacing: .5px; }
 .s-anpc-badge small { font-size: 6px; color: rgba(255,255,255,.3); text-transform: uppercase; }
-@media (max-width: 768px) { .s-footer-grid { grid-template-columns: 1fr 1fr; } .s-footer-inner { padding: 0 24px; } .s-footer-bottom { flex-direction: column; align-items: flex-start; } }
-@media (max-width: 480px) { .s-footer-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { .s-footer-grid { grid-template-columns: 1fr 1fr; gap: 20px; padding-bottom: 24px; margin-bottom: 20px; } .s-footer-inner { padding: 0 20px; } .s-footer-bottom { flex-direction: column; align-items: flex-start; } }
+@media (max-width: 480px) { .s-footer-grid { grid-template-columns: 1fr 1fr; gap: 16px; } .s-footer-col h4 { margin-bottom: 10px; } .s-footer-col p, .s-footer-col a { font-size: 13px; line-height: 1.7; } }
 
 /* ── MOBILE GLOBAL ── */
 @media (max-width: 768px) {
   .page-hero { display: none; }
   .page-hero-content { padding: 0 20px; }
   .page-hero-title { font-size: clamp(30px,9vw,48px); }
-  .events-intro { padding: 64px 0; }
+  .events-intro { padding: 64px 0; padding-top: 100px; }
   .events-team { padding: 56px 0; }
   .events-img img { height: 260px; }
   .s-btn-wa { width: 100%; justify-content: center; padding: 16px 20px; font-size: 11px; }
@@ -296,9 +296,6 @@ body {
 <!-- HEADER -->
 <header class="s-header" id="sHeader">
   <nav class="s-nav">
-    <a href="index.html" class="s-logo">
-      <img src="assets/img/logo orig.jpeg" alt="Pescăria Sutac">
-    </a>
     <ul class="s-nav-links">
       <li><a href="index.html">Acasă</a></li>
       <li><a href="povestea.html">Povestea</a></li>
