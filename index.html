@@ -50,9 +50,11 @@ a { text-decoration: none; color: inherit; }
   box-shadow: 0 4px 40px rgba(0,0,0,.45);
 }
 .s-nav {
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center; justify-content: center;
   padding: 14px 60px; max-width: 1400px; margin: 0 auto;
+  position: relative;
 }
+.s-logo { position: absolute; left: 60px; top: 50%; transform: translateY(-50%); }
 .s-logo img { height: 72px; width: auto; filter: invert(1); mix-blend-mode: screen; }
 .s-nav-links { display: flex; list-style: none; gap: 44px; align-items: center; }
 .s-nav-links a {
@@ -99,10 +101,9 @@ a { text-decoration: none; color: inherit; }
 .s-mobile-menu a:hover { color: var(--gold); }
 
 @media (max-width: 960px) {
-  .s-nav { flex-direction: row; align-items: center; justify-content: space-between; gap: 0; padding: 10px 16px; }
-  .s-logo { order: 2; flex-shrink: 0; }
-  .s-logo img { height: 52px; }
-  .s-nav-links { order: 1; flex: 1; display: flex; gap: 7px 13px; flex-wrap: wrap; justify-content: flex-start; align-items: center; }
+  .s-nav { flex-direction: row; align-items: center; justify-content: flex-start; gap: 0; padding: 10px 16px; position: static; }
+  .s-logo { display: none; }
+  .s-nav-links { flex: 1; display: flex; gap: 7px 13px; flex-wrap: wrap; justify-content: flex-start; align-items: center; }
   .s-nav-links a { font-size: 9px; letter-spacing: 1.5px; }
   .s-nav-cta { padding: 7px 14px !important; font-size: 9px !important; }
   .s-hamburger { display: none; }
@@ -759,6 +760,9 @@ body {
 <!-- HEADER -->
 <header class="s-header" id="sHeader">
   <nav class="s-nav">
+    <a href="index.html" class="s-logo">
+      <img src="assets/img/logo  sutac 9 (1).png" alt="Pescăria Sutac">
+    </a>
     <ul class="s-nav-links">
       <li><a href="index.html">Acasă</a></li>
       <li><a href="povestea.html">Povestea</a></li>
