@@ -31,7 +31,8 @@ a { text-decoration: none; color: inherit; }
 /* ── NAV ── */
 .s-header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(6,24,32,.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(201,168,76,.2); transition: background .4s, border-color .4s, box-shadow .4s; }
 .s-header.scrolled { background: rgba(6,24,32,.97); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom: 1px solid rgba(201,168,76,.35); box-shadow: 0 4px 40px rgba(0,0,0,.45); }
-.s-nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 60px; max-width: 1400px; margin: 0 auto; }
+.s-nav { display: flex; align-items: center; justify-content: center; padding: 25px 60px; max-width: 1400px; margin: 0 auto; position: relative; }
+.s-logo { position: absolute; left: 60px; top: 50%; transform: translateY(-50%); }
 .s-logo img { height: 72px; width: auto; filter: invert(1); mix-blend-mode: screen; }
 .s-nav-links { display: flex; list-style: none; gap: 44px; align-items: center; }
 .s-nav-links a { color: rgba(245,240,232,.92); font-family: 'Raleway', sans-serif; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; transition: color .25s; position: relative; }
@@ -53,9 +54,9 @@ a { text-decoration: none; color: inherit; }
 .s-mobile-menu a { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px,5vw,40px); color: var(--cream); font-style: italic; }
 .s-mobile-menu a:hover { color: var(--gold); }
 @media (max-width: 960px) {
-  .s-nav { flex-direction: column; gap: 8px; padding: 10px 16px; align-items: center; }
-  .s-logo img { height: 44px; }
-  .s-nav-links { display: flex; gap: 10px 18px; flex-wrap: wrap; justify-content: center; align-items: center; }
+  .s-nav { flex-direction: row; align-items: center; justify-content: flex-start; gap: 0; padding: 10px 16px; position: static; }
+  .s-logo { display: none; }
+  .s-nav-links { flex: 1; display: flex; gap: 7px 13px; flex-wrap: wrap; justify-content: flex-start; align-items: center; }
   .s-nav-links a { font-size: 9px; letter-spacing: 1.5px; }
   .s-nav-cta { padding: 7px 14px !important; font-size: 9px !important; }
   .s-hamburger { display: none; }
@@ -296,6 +297,9 @@ body {
 <!-- HEADER -->
 <header class="s-header" id="sHeader">
   <nav class="s-nav">
+    <a href="index.html" class="s-logo">
+      <img src="assets/img/logo  sutac 9 (1).png" alt="Pescăria Sutac">
+    </a>
     <ul class="s-nav-links">
       <li><a href="index.html">Acasă</a></li>
       <li><a href="povestea.html">Povestea</a></li>
